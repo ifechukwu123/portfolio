@@ -2,6 +2,9 @@ import SmileIcon from "../../public/icons/smiling-emoji.svg";
 import Button from "components/Button";
 import Image from "next/image";
 import profilePic from "../../public/images/profile.jpg";
+import ReactIcon from "../../public/icons/tools/react.svg";
+import Tool from "components/Tool";
+import ProjectList from "components/ProjectList";
 
 export default function Home() {
 	return (
@@ -28,6 +31,28 @@ export default function Home() {
 			</section>
 			<section>
 				<h2>what i work with</h2>
+				<Tool name="react">
+					<ReactIcon />
+				</Tool>
+			</section>
+			<section>
+				<h2>browse my selected projects</h2>
+				<ProjectList />
+				<Button>view all projects</Button>
+			</section>
+			<section>
+				<h2>
+					looking for a developer who notices the small things and is committed
+					delivering exceptional quality? <span>that&apos;s me!</span>
+				</h2>
+				<p>
+					With a sharp eye for detail and design, a strong foundation in
+					full-stack development, and a passion for continuous learning,
+					I&apos;m eager to collaborate and make ideas happen. I&apos;m
+					currently seeking new opportunities to bring my skills and enthusiasm
+					to exciting projects.
+				</p>
+				<Button>let&apos;s connect</Button>
 			</section>
 		</main>
 	);
