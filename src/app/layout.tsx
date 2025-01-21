@@ -4,7 +4,7 @@ import Header from "components/Header";
 import Footer from "components/Footer";
 
 export const metadata: Metadata = {
-	title: "Ife Onuorah",
+	title: "Ife Onuorah | Software Developer",
 	description: "Portfolio page for Ife Onuorah",
 };
 
