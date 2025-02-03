@@ -23,6 +23,16 @@ export default {
 				md: "768px",
 				lg: "1280px",
 			},
+			borderRadius: {
+				sm: "0.375rem",
+				md: "1rem",
+				lg: "1.25rem",
+			},
+			padding: {
+				sm: "1.6875rem",
+				md: "2.5rem",
+				lg: "4.375rem",
+			},
 		},
 	},
 	plugins: [],
