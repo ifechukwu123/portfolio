@@ -9,13 +9,19 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				logo: ["var(--font-logo)", "serif"],
-				heading: ["var(--font-heading)", "serif"],
-				body: ["var(--font-body)", "sans-serif"],
+				heading: "var(--font-heading)",
+				body: "var(--font-body)",
 			},
 			colors: {
-				background: "var(--background)",
-				foreground: "var(--foreground)",
+				alabaster: "#EBEBE3",
+				licorice: "#150B0A",
+				"apple-green": "#B0B436",
+				"black-bean": "#340000",
+				"rose-red": "#B91C4F",
+			},
+			screens: {
+				md: "768px",
+				lg: "1280px",
 			},
 		},
 	},
