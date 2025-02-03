@@ -32,7 +32,7 @@ export default function RootLayout({
 			lang="en"
 			className={`${source_serif_4.variable} ${nunito_sans.variable}`}
 		>
-			<body className="text-black-bean bg-alabaster dark:text-alabaster dark:bg-black-bean font-heading">
+			<body className="text-black-bean bg-alabaster dark:text-alabaster dark:bg-black-bean font-body">
 				<Header />
 				{children}
 				<Footer />

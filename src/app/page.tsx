@@ -10,13 +10,15 @@ export default function Home() {
 	return (
 		<main>
 			<section>
-				<h1>
+				<h1 className="capitalize font-heading flex gap-[0.5625rem]">
 					hello! <SmileIcon />
 				</h1>
 				<p>
 					I&apos;m Ife Onuorah, a full-stack software developer with a simple
 					yet powerful approach: &quot;
-					<span>Impact Matters More Than Intent</span>
+					<span className="italic capitalize text-rose-red">
+						impact matters more than intent
+					</span>
 					&quot;
 				</p>
 				<p>
