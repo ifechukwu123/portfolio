@@ -1,3 +1,6 @@
+"use client";
+
+import { useRouter } from "next/navigation";
 import SmileIcon from "../../public/icons/smiling-emoji.svg";
 import Button from "components/Button";
 import Image from "next/image";
@@ -7,6 +10,8 @@ import Tool from "components/Tool";
 import ProjectList from "components/ProjectList";
 
 export default function Home() {
+	const router = useRouter();
+
 	return (
 		<main>
 			<section>
@@ -27,7 +32,7 @@ export default function Home() {
 					technical skill set, I&apos;m excited to contribute to meaningful
 					projects and make a difference through code.
 				</p>
-				<Button>get to know me</Button>
+				<Button onClick={() => router.push("/about")}>get to know me</Button>
 
 				<Image src={profilePic} alt="A picture of me, Ife Onuorah" />
 			</section>
@@ -40,7 +45,9 @@ export default function Home() {
 			<section>
 				<h2>browse my selected projects</h2>
 				<ProjectList />
-				<Button>view all projects</Button>
+				<Button onClick={() => router.push("/projects")}>
+					view all projects
+				</Button>
 			</section>
 			<section>
 				<h2>
@@ -54,7 +61,9 @@ export default function Home() {
 					currently seeking new opportunities to bring my skills and enthusiasm
 					to exciting projects.
 				</p>
-				<Button>let&apos;s connect</Button>
+				<Button onClick={() => router.push("/contact")}>
+					let&apos;s connect
+				</Button>
 			</section>
 		</main>
 	);
