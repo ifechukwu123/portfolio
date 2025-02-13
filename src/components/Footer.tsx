@@ -1,5 +1,5 @@
 import SmileIcon from "../../public/icons/smile-shape.svg";
-import Logo from "./Logo";
+//import Logo from "./Logo";
 import HeartIcon from "../../public/icons/heart.svg";
 
 export default function Footer() {
@@ -23,7 +23,7 @@ export default function Footer() {
 				</div>
 			</div>
 			<div>
-				<Logo />
+				{/* <Logo /> */}
 				<div>
 					<span>
 						made with <HeartIcon /> by <span>ife onuorah</span>
