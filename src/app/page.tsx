@@ -14,27 +14,41 @@ export default function Home() {
 
 	return (
 		<main>
-			<section>
-				<h1 className="capitalize font-heading flex gap-[0.5625rem]">
-					hello! <SmileIcon />
-				</h1>
-				<p>
-					I&apos;m Ife Onuorah, a full-stack software developer with a simple
-					yet powerful approach: &quot;
-					<span className="italic capitalize text-rose-red">
-						impact matters more than intent
-					</span>
-					&quot;
-				</p>
-				<p>
-					I enjoy building inclusive digital experiences and learning alongside
-					others. With creativity, a collaborative spirit, and a growing
-					technical skill set, I&apos;m excited to contribute to meaningful
-					projects and make a difference through code.
-				</p>
-				<Button onClick={() => router.push("/about")}>get to know me</Button>
-
-				<Image src={profilePic} alt="A picture of me, Ife Onuorah" />
+			<section className="px-sm flex flex-col gap-[1.5rem] md:px-[6rem] md:flex-row md:items-center">
+				<div>
+					<div className="flex items-end">
+						<div>
+							<h1 className="font-heading capitalize font-bold flex gap-[0.5625rem]">
+								hello! <SmileIcon />
+							</h1>
+							<p>
+								I&lsquo;m Ife Onuorah, a full-stack software developer with a
+								simple yet powerful approach: &ldquo;
+								<span className="italic capitalize text-rose-red">
+									impact matters more than intent
+								</span>
+								&ldquo;
+							</p>
+						</div>
+						<Image
+							src={profilePic}
+							alt="A picture of me, Ife Onuorah!"
+							className="w-1/2 md:hidden"
+						/>
+					</div>
+					<p>
+						I enjoy building inclusive digital experiences and learning
+						alongside others. With creativity, a collaborative spirit, and a
+						growing technical skill set, I&apos;m excited to contribute to
+						meaningful projects and make a difference through code.
+					</p>
+					<Button onClick={() => router.push("/about")}>get to know me</Button>
+				</div>
+				<Image
+					src={profilePic}
+					alt="A picture of me, Ife Onuorah!"
+					className="w-1/3 hidden md:block"
+				/>
 			</section>
 			<section>
 				<h2>what i work with</h2>
