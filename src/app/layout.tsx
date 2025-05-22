@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import Header from "components/Header";
 import Footer from "components/Footer";
 import "styles/globals.css";
+import Script from "next/script";
 
 const source_serif_4 = Source_Serif_4({
 	fallback: ["Garamond", "Georgia", "serif"],
@@ -20,6 +21,19 @@ const nunito_sans = Nunito_Sans({
 export const metadata: Metadata = {
 	title: "Ife Onuorah | Software Developer",
 	description: "Portfolio page for Ife Onuorah",
+	creator: "Ife Onuorah",
+	icons: [
+		{
+			media: "(prefers-color-scheme: light)",
+			url: "/logo/mobile.svg",
+			type: "image/svg",
+		},
+		{
+			media: "(prefers-color-scheme: dark)",
+			url: "/logo/mobile-dark.svg",
+			type: "image/svg",
+		},
+	],
 };
 
 export default function RootLayout({
@@ -27,11 +41,31 @@ export default function RootLayout({
 }: Readonly<{
 	children: React.ReactNode;
 }>) {
+	const setTheme = `const userPreference = localStorage.getItem("theme");
+	const systemPreference = window.matchMedia(
+		"(prefers-color-scheme:dark)"
+	).matches;
+
+	if (userPreference === "dark" || (!userPreference && systemPreference)) {
+		document.documentElement.classList.add("dark");
+	} else {
+		document.documentElement.classList.remove("dark");
+	}`;
+
 	return (
 		<html
 			lang="en"
-			className={`${source_serif_4.variable} ${nunito_sans.variable}`}
+			className={`${source_serif_4.variable} ${nunito_sans.variable}
+
+		`}
 		>
+			<head>
+				<Script
+					id="set-theme"
+					dangerouslySetInnerHTML={{ __html: setTheme }}
+					strategy="beforeInteractive"
+				/>
+			</head>
 			<body className="text-black-bean dark:text-alabaster bg-apple-green font-body">
 				<Header />
 				{children}
