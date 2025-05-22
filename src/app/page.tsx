@@ -13,7 +13,7 @@ export default function Home() {
 	const router = useRouter();
 
 	return (
-		<main>
+		<main className="bg-alabaster dark:bg-black-bean">
 			<section className="px-sm flex flex-col gap-[1.5rem] md:px-[6rem] md:flex-row md:items-center">
 				<div>
 					<div className="flex items-end">

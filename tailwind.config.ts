@@ -24,14 +24,14 @@ export default {
 				lg: "1280px",
 			},
 			borderRadius: {
-				sm: "0.375rem",
+				sm: "0.25rem",
 				md: "1rem",
 				lg: "1.25rem",
 			},
 			padding: {
-				sm: "1.6875rem",
-				md: "2.5rem",
-				lg: "4.375rem",
+				sm: "1rem",
+				md: "3rem",
+				lg: "4rem",
 			},
 		},
 	},
