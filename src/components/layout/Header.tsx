@@ -19,7 +19,7 @@ export default function Header() {
 	}, []);
 
 	return (
-		<header className="relative px-sm md:px-md lg:px-lg bg-alabaster dark:bg-licorice">
+		<header className="relative px-sm md:px-md lg:px-lg bg-alabaster dark:bg-licorice md:text-base lg:text-xl">
 			{/* header wrapper */}
 			<div className="py-4 flex justify-between items-center border-b-2 border-licorice dark:border-alabaster">
 				{/* Logo */}
@@ -61,22 +61,22 @@ export default function Header() {
 					className="hidden absolute inset-0 md:flex justify-center items-center"
 				>
 					<ul role="list" className="flex capitalize gap-5">
-						<li>
+						<li role="listitem">
 							<Link href="/projects" className="py-3">
 								projects
 							</Link>
 						</li>
-						<li>
+						<li role="listitem">
 							<Link href="/about" className="py-3">
 								about
 							</Link>
 						</li>
-						<li>
+						<li role="listitem">
 							<Link href="/contact" className="py-3">
 								contact
 							</Link>
 						</li>
-						<li>
+						<li role="listitem">
 							<a
 								href="/files/Ife_Onuorah_Resume.pdf"
 								target="_blank"
