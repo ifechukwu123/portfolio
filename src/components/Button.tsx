@@ -1,4 +1,5 @@
-import RightArrowIcon from "../../public/icons/arrow-right.svg";
+import Image from "next/image";
+import RightArrowIcon from "/public/icons/arrow-right.svg?url";
 
 interface ButtonPropTypes {
 	onClick: () => void;
@@ -8,10 +9,16 @@ interface ButtonPropTypes {
 export default function Button({ onClick, children }: ButtonPropTypes) {
 	return (
 		<button
-			className="w-max p-[0.625rem] flex items-center gap-[1.25rem] rounded-sm bg-apple-green border-[1px] border-licorice uppercase"
+			className="px-3 py-2 md:px-4 md:py-3 flex gap-4 items-center bg-apple-green border border-licorice rounded-sm uppercase text-base md:text-lg lg:text-lg"
 			onClick={onClick}
 		>
-			{children} <RightArrowIcon />
+			{children}{" "}
+			<Image
+				src={RightArrowIcon}
+				alt=""
+				aria-hidden="true"
+				className="md:w-[1.125rem]"
+			/>
 		</button>
 	);
 }

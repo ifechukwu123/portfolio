@@ -1,11 +1,11 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import SmileIcon from "../../public/icons/smiling-emoji.svg";
+import SmileIcon from "/public/icons/smiling-emoji.svg";
 import Button from "components/Button";
 import Image from "next/image";
-import profilePic from "../../public/images/profile.jpg";
-import ReactIcon from "../../public/icons/tools/react.svg";
+import profilePic from "/public/images/profile.jpg";
+import ReactIcon from "/public/icons/tools/react.svg";
 import Tool from "components/Tool";
 import ProjectList from "components/ProjectList";
 
@@ -14,40 +14,28 @@ export default function Home() {
 
 	return (
 		<main className="bg-alabaster dark:bg-licorice">
-			<section className="px-sm flex flex-col gap-[1.5rem] md:px-[6rem] md:flex-row md:items-center">
+			<section className="px-sm h-[calc(100vh-5.1875rem)] flex flex-col-reverse justify-center items-center">
 				<div>
-					<div className="flex items-end">
-						<div>
-							<h1 className="font-heading capitalize font-bold flex gap-[0.5625rem]">
-								hello! <SmileIcon />
-							</h1>
-							<p>
-								I&lsquo;m Ife Onuorah, a full-stack software developer with a
-								simple yet powerful approach: &ldquo;
-								<span className="italic capitalize text-rose-red">
-									impact matters more than intent
-								</span>
-								&ldquo;
-							</p>
-						</div>
-						<Image
-							src={profilePic}
-							alt="A picture of me, Ife Onuorah!"
-							className="w-1/2 md:hidden"
-						/>
+					<div>
+						<h1 className="font-heading capitalize font-bold flex gap-[0.5625rem]">
+							hello! <SmileIcon />
+						</h1>
+						<p>
+							I&lsquo;m Ife Onuorah, a full-stack software developer with a
+							simple yet powerful approach: &ldquo;
+							<span className="italic capitalize text-rose-red">
+								impact matters more than intent
+							</span>
+							&ldquo;
+						</p>
 					</div>
-					<p>
-						I enjoy building inclusive digital experiences and learning
-						alongside others. With creativity, a collaborative spirit, and a
-						growing technical skill set, I&apos;m excited to contribute to
-						meaningful projects and make a difference through code.
-					</p>
+
 					<Button onClick={() => router.push("/about")}>get to know me</Button>
 				</div>
 				<Image
 					src={profilePic}
 					alt="A picture of me, Ife Onuorah!"
-					className="w-1/3 hidden md:block"
+					className=""
 				/>
 			</section>
 			<section>

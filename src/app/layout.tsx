@@ -71,7 +71,7 @@ export default function RootLayout({
 					strategy="beforeInteractive"
 				/>
 			</head>
-			<body className="text-black-bean dark:text-alabaster bg-apple-green font-body">
+			<body>
 				<Header />
 				{children}
 				<Footer />

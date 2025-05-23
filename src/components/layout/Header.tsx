@@ -20,8 +20,11 @@ export default function Header() {
 
 	return (
 		<header className="relative px-sm md:px-md lg:px-lg bg-alabaster dark:bg-licorice">
-			<div className="py-[1rem] flex justify-between items-center border-b-2 border-licorice dark:border-alabaster">
+			{/* header wrapper */}
+			<div className="py-4 flex justify-between items-center border-b-2 border-licorice dark:border-alabaster">
+				{/* Logo */}
 				<Link href="/" className="z-10">
+					{/* mobile logos */}
 					<Image
 						src={MobileLogo}
 						alt="Logo for Ife Onuorah"
@@ -33,6 +36,7 @@ export default function Header() {
 						className="hidden dark:block dark:md:hidden"
 					/>
 
+					{/* tablet/desktop logos */}
 					<div className="hidden md:block">
 						<Image
 							src={Logo}
@@ -51,11 +55,12 @@ export default function Header() {
 					</div>
 				</Link>
 
+				{/* tablet/desktop navigation links */}
 				<nav
 					aria-label="Main"
 					className="hidden absolute inset-0 md:flex justify-center items-center"
 				>
-					<ul role="list" className="flex capitalize gap-[1.25rem]">
+					<ul role="list" className="flex capitalize gap-5">
 						<li>
 							<Link href="/projects" className="py-3">
 								projects
@@ -84,9 +89,10 @@ export default function Header() {
 					</ul>
 				</nav>
 
-				<div className="flex gap-[0.5rem] z-10">
+				{/* theme & mobile menu options */}
+				<div className="flex gap-4 z-10">
 					<button
-						className="p-[0.75rem] md:p-[0.625rem]"
+						className="p-2.5"
 						aria-label={
 							isLightMode ? "Change to Dark Mode" : "Change to Light Mode"
 						}
@@ -110,7 +116,7 @@ export default function Header() {
 						/>
 					</button>
 					<button
-						className="p-[0.75rem] md:hidden"
+						className="p-2.5 md:hidden"
 						aria-label="Display menu"
 						onClick={() => {
 							setIsMenuOpen(isMenuOpen);
