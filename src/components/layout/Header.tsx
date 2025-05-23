@@ -15,37 +15,36 @@ export default function Header() {
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	useEffect(() => {
-		const userPreference = localStorage.getItem("theme");
-		const systemPreference = window.matchMedia(
-			"(prefers-color-scheme:dark)"
-		).matches;
-
-		if (userPreference === "dark" || (!userPreference && systemPreference)) {
-			document.documentElement.classList.add("dark");
-			setIsLightMode(false);
-		} else {
-			document.documentElement.classList.remove("dark");
-			setIsLightMode(true);
-		}
+		setIsLightMode(!document.documentElement.classList.contains("dark"));
 	}, []);
 
 	return (
-		<header className="relative px-sm md:px-md bg-alabaster dark:bg-licorice">
+		<header className="relative px-sm md:px-md lg:px-lg bg-alabaster dark:bg-licorice">
 			<div className="py-[1rem] flex justify-between items-center border-b-2 border-licorice dark:border-alabaster">
 				<Link href="/" className="z-10">
 					<Image
-						src={isLightMode ? MobileLogo : MobileLogoDark}
+						src={MobileLogo}
 						alt="Logo for Ife Onuorah"
-						className="md:hidden"
+						className="dark:hidden md:hidden"
+					/>
+					<Image
+						src={MobileLogoDark}
+						alt="Logo for Ife Onuorah"
+						className="hidden dark:block dark:md:hidden"
 					/>
 
 					<div className="hidden md:block">
 						<Image
-							src={isLightMode ? Logo : LogoDark}
+							src={Logo}
 							alt="Logo for Ife Onuorah"
-							className="lg:w-[12.0625rem]"
+							className="dark:hidden lg:w-[12.0625rem]"
 						/>
-						<span className="block text-[0.75rem] text-licorice/50 capitalize ">
+						<Image
+							src={LogoDark}
+							alt="Logo for Ife Onuorah"
+							className="hidden dark:block lg:w-[12.0625rem]"
+						/>
+						<span className="block text-[0.75rem] text-licorice/50 dark:text-alabaster capitalize ">
 							software developer{" "}
 							<span className="text-apple-green italic">+ dreamer</span>
 						</span>
@@ -91,13 +90,23 @@ export default function Header() {
 						aria-label={
 							isLightMode ? "Change to Dark Mode" : "Change to Light Mode"
 						}
-						onClick={() => setIsLightMode(!isLightMode)}
+						onClick={() => {
+							setIsLightMode(!isLightMode);
+							document.documentElement.classList.toggle("dark");
+							localStorage.setItem("theme", isLightMode ? "dark" : "light");
+						}}
 					>
 						<Image
-							src={isLightMode ? SunIcon : MoonIcon}
+							src={SunIcon}
 							alt=""
 							aria-hidden="true"
-							className="w-[1.5625rem]"
+							className="dark:hidden w-[1.5625rem]"
+						/>
+						<Image
+							src={MoonIcon}
+							alt=""
+							aria-hidden="true"
+							className="hidden dark:block w-[1.5625rem]"
 						/>
 					</button>
 					<button

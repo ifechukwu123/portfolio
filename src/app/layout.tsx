@@ -1,8 +1,9 @@
 import { Source_Serif_4 } from "next/font/google";
 import { Nunito_Sans } from "next/font/google";
 import type { Metadata } from "next";
-import Header from "components/Header";
-import Footer from "components/Footer";
+import type { Viewport } from "next";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import "styles/globals.css";
 import Script from "next/script";
 
@@ -10,13 +11,13 @@ const source_serif_4 = Source_Serif_4({
 	fallback: ["Garamond", "Georgia", "serif"],
 	subsets: ["latin"],
 	variable: "--font-heading",
-});
+}); //font for headers
 
 const nunito_sans = Nunito_Sans({
 	fallback: ["Arial", "Verdana", "sans-serif"],
 	subsets: ["latin"],
 	variable: "--font-body",
-});
+}); //font for body
 
 export const metadata: Metadata = {
 	title: "Ife Onuorah | Software Developer",
@@ -36,6 +37,10 @@ export const metadata: Metadata = {
 	],
 };
 
+export const viewport: Viewport = {
+	colorScheme: "light dark",
+}; //light & dark color schemes available on this portfolio
+
 export default function RootLayout({
 	children,
 }: Readonly<{
@@ -50,7 +55,7 @@ export default function RootLayout({
 		document.documentElement.classList.add("dark");
 	} else {
 		document.documentElement.classList.remove("dark");
-	}`;
+	}`; //need to fix the jumpiness
 
 	return (
 		<html

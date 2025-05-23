@@ -1,6 +1,6 @@
-import SmileIcon from "../../public/icons/smile-shape.svg";
+import SmileIcon from "/public/icons/smile-shape.svg";
 //import Logo from "./Logo";
-import HeartIcon from "../../public/icons/heart.svg";
+import HeartIcon from "/public/icons/heart.svg";
 
 export default function Footer() {
 	return (
