@@ -16,7 +16,7 @@ export default function About() {
 						<Image
 							src={SmileIcon}
 							alt="smiling face emoji"
-							className="w-[1.875rem]"
+							className="w-[1.875rem] dark:invert"
 						/>
 					</h1>
 					<p className="w-4/5 max-w-[28.5rem] text-center leading-[1.875rem]">

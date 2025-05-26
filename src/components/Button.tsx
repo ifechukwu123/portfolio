@@ -14,7 +14,7 @@ export default function Button({
 }: ButtonPropTypes) {
 	return (
 		<button
-			className={`px-3 py-2 md:px-4 md:py-3 flex gap-4 items-center bg-apple-green border border-licorice rounded-sm uppercase text-base md:text-lg lg:text-lg ${classname}`}
+			className={`px-3 py-2 md:px-4 md:py-3 flex gap-4 items-center bg-apple-green border border-licorice rounded-sm uppercase text-base dark:text-licorice md:text-lg lg:text-lg ${classname}`}
 			onClick={onClick}
 		>
 			{children}{" "}
