@@ -1,6 +1,6 @@
 interface ToolProps {
-	children: React.ReactNode;
 	name: string;
+	children: React.ReactNode;
 }
 
 export default function Tool({ children, name }: ToolProps) {

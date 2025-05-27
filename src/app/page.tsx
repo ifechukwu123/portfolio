@@ -1,10 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
 import Button from "components/Button";
-import ReactIcon from "/public/icons/tools/react.svg";
-import Tool from "components/Tool";
-import ProjectList from "components/ProjectList";
+import ProjectList from "@/components/pages/homepage/ProjectList";
 import About from "components/pages/homepage/About";
+import Skills from "@/components/pages/homepage/Skills";
 
 export default function Home() {
 	const router = useRouter();
@@ -12,12 +11,7 @@ export default function Home() {
 	return (
 		<main className="bg-alabaster dark:bg-licorice flex flex-col gap-[4.5rem]">
 			<About />
-			<section>
-				<h2>what i work with</h2>
-				<Tool name="react">
-					<ReactIcon />
-				</Tool>
-			</section>
+			<Skills />
 			<section>
 				<h2>browse my selected projects</h2>
 				<ProjectList />
