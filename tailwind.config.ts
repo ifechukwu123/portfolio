@@ -26,7 +26,7 @@ export default {
 			},
 			borderRadius: {
 				sm: "0.25rem",
-				md: "1rem",
+				md: "1.125rem",
 				lg: "1.25rem",
 			},
 			padding: {
