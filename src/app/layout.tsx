@@ -1,4 +1,4 @@
-import { Source_Serif_4 } from "next/font/google";
+import { Baskervville } from "next/font/google";
 import { Nunito_Sans } from "next/font/google";
 import type { Metadata } from "next";
 import type { Viewport } from "next";
@@ -7,13 +7,17 @@ import Footer from "@/components/layout/Footer";
 import "styles/globals.css";
 import Script from "next/script";
 
-const source_serif_4 = Source_Serif_4({
+const baskervville = Baskervville({
+	preload: true,
+	weight: "400",
 	fallback: ["Garamond", "Georgia", "serif"],
 	subsets: ["latin"],
 	variable: "--font-heading",
-}); //font for headers
+}); //font for headers (second option, use playfair display)
 
 const nunito_sans = Nunito_Sans({
+	preload: true,
+
 	fallback: ["Arial", "Verdana", "sans-serif"],
 	subsets: ["latin"],
 	variable: "--font-body",
@@ -60,7 +64,7 @@ export default function RootLayout({
 	return (
 		<html
 			lang="en"
-			className={`${source_serif_4.variable} ${nunito_sans.variable}
+			className={`${baskervville.variable} ${nunito_sans.variable}
 
 		`}
 		>

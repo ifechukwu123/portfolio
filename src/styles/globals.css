@@ -20,14 +20,14 @@
 	}
 
 	h1 {
-		@apply text-[4rem] leading-[6rem] md:text-[6rem] md:leading-[9rem];
+		@apply font-normal text-[3.5rem] leading-[5.25rem] md:text-[6rem] md:leading-[9rem];
 	}
 
 	h2 {
-		@apply text-[1.75rem] leading-[2.625rem] md:text-[2.5rem] md:leading-[3.75rem] lg:text-[3rem] lg:leading-[4.5rem];
+		@apply text-[2rem] leading-[2.625rem] md:text-[2.5rem] md:leading-[3.75rem] lg:text-[3rem] lg:leading-[4.5rem];
 	}
 
 	h3 {
-		@apply text-[1.125rem] leading-[1.6875rem] md:text-[1.25rem] md:leading-[1.875rem] lg:text-[2rem] lg:leading-[3rem];
+		@apply text-[1.25rem] leading-[1.875rem] md:text-[1.25rem] md:leading-[1.875rem] lg:text-[2rem] lg:leading-[3rem];
 	}
 }

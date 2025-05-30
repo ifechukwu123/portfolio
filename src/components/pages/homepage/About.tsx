@@ -1,3 +1,4 @@
+"use client";
 import { useRouter } from "next/navigation";
 import SmileIcon from "/public/icons/smiling-emoji.svg?url";
 import Image from "next/image";
