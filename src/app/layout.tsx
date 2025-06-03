@@ -21,7 +21,7 @@ const nunito_sans = Nunito_Sans({
 	fallback: ["Arial", "Verdana", "sans-serif"],
 	subsets: ["latin"],
 	variable: "--font-body",
-}); //font for body
+}); //font for body (second option, instrument sans?)
 
 export const metadata: Metadata = {
 	title: "Ife Onuorah | Software Developer",

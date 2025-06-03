@@ -20,7 +20,7 @@ export default function About() {
 							className="w-[1.5625rem] md:w-[2.75rem] dark:invert"
 						/>
 					</h1>
-					<p className="px-2 mt-[-0.5rem] max-w-[22.25rem] md:max-w-[31.25rem] text-center leading-[1.75rem] text-[18px] md:text-2xl md:text-left md:leading-[2.5rem]">
+					<p className="px-2 mt-[-0.5rem] max-w-[22.25rem] md:max-w-[31.25rem] text-center leading-[1.75rem] text-[1.125rem] md:text-2xl md:text-left md:leading-[2.5rem]">
 						I&#39;m Ife, a full-stack software developer with a simple yet
 						powerful approach: &ldquo;
 						<span className="italic capitalize text-rose-red">

@@ -27,28 +27,22 @@ const skills = [
 
 export default function Skills() {
 	return (
-		<section>
-			<h2 className="font-body uppercase text-xl font-bold mb-2 px-sm md:hidden">
+		<section className="md:flex">
+			<h2 className="uppercase text-xl font-bold mb-2 md:mb-0 px-sm md:pl-12 md:pr-sm md:py-sm lg:py-10 lg:pl-lg lg:pr-6 md:bg-black-bean md:text-alabaster md:text-2xl md:leading-[2.25rem] md:border-r-2 md:border-alabaster md:w-[14.375rem] md:shrink-0 lg:size-max ">
 				what i work with
 			</h2>
-			<div className="py-6 md:py-0 bg-black-bean md:flex items-center">
-				<h2 className="hidden md:block font-body text-alabaster uppercase text-2xl leading-[2.25rem] font-bold pl-12 pr-sm py-sm lg:py-10 lg:pl-lg lg:pr-6 border-r-2 border-alabaster w-[13.75rem] shrink-0 lg:size-max">
-					what i work with
-				</h2>
-				<ul role="list" className="flex gap-4 overflow-scroll md:pl-sm lg:pl-6">
-					{skills.map((skill) => (
-						<li key={skill.id} role="listitem">
+			<div className="group py-6 md:py-0 bg-black-bean overflow-hidden md:flex md:items-center">
+				<ul
+					role="list"
+					className="flex gap-4 md:pl-sm lg:pl-6 w-max motion-safe:animate-marquee group-hover:motion-safe:[animation-play-state:paused]"
+				>
+					{/* Duplicate for marquee animation */}
+					{[...skills, ...skills].map((skill, index) => (
+						<li key={`${skill.id}-${index}`} role="listitem">
 							<Tool name={skill.name} image={skill.image} />
 						</li>
 					))}
-				</ul>
-
-				<ul role="list" className="flex gap-4 overflow-scroll mt-6 md:hidden">
-					{skills.map((skill) => (
-						<li key={skill.id} role="listitem">
-							<Tool name={skill.name} image={skill.image} />
-						</li>
-					))}
+					{/* What happens if the user doesn't like animation? */}
 				</ul>
 			</div>
 		</section>
