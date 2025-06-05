@@ -2,15 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-	--background: #ffffff;
-	--foreground: #171717;
-}
-
 @layer base {
 	/* what about text as black bean instead? */
 	body {
-		@apply font-body text-[1rem] leading-[1.5rem] md:text-[1.25rem] md:leading-[1.875rem] lg:text-[1.5rem] lg:leading-[2.25rem] text-licorice dark:text-alabaster bg-apple-green min-h-screen;
+		@apply font-body text-[1rem] leading-[1.5rem] md:text-[1.125rem] md:leading-[1.6875rem] text-licorice dark:text-alabaster bg-apple-green min-h-screen;
 	}
 
 	h1,
@@ -20,7 +15,7 @@
 	}
 
 	h1 {
-		@apply font-normal text-[3.5rem] leading-[5.25rem] md:text-[6rem] md:leading-[9rem];
+		@apply font-normal text-[3.5rem] leading-[5.25rem] md:text-[4.25rem] md:leading-[6.375rem];
 	}
 
 	h2 {
@@ -28,6 +23,6 @@
 	}
 
 	h3 {
-		@apply text-[1.25rem] leading-[1.875rem] md:text-[1.25rem] md:leading-[1.875rem] lg:text-[2rem] lg:leading-[3rem];
+		@apply text-[1.25rem] leading-[1.875rem] md:text-[1.5rem] md:leading-[2.25rem] lg:text-[2rem] lg:leading-[3rem];
 	}
 }
