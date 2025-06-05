@@ -9,9 +9,9 @@ export default function About() {
 	const router = useRouter();
 
 	return (
-		<section className="px-sm py-[2rem] md:px-md lg:px-lg h-[calc(100dvh-4.4375rem)] md:h-[calc(100vh-5.4375rem)] flex flex-col-reverse md:flex-row justify-center items-center gap-4 md:gap-4 lg:gap-24">
+		<section className="px-sm py-[2rem] md:px-md lg:px-lg h-[calc(100vh-4.4375rem)] min-h-[35.625rem] md:h-[calc(100vh-5.4375rem)] flex flex-col-reverse md:flex-row justify-center items-center gap-4 md:gap-4 lg:gap-24">
 			<div className="flex-1 flex flex-col gap-6 md:gap-9 md:flex-1 md:max-w-[31.25rem]">
-				<div className="flex-1 flex flex-col items-center md:items-start">
+				<div className="flex flex-col items-center md:items-start">
 					<h1 className="capitalize flex items-baseline gap-1 md:gap-2">
 						<span>hello!</span>{" "}
 						<Image
