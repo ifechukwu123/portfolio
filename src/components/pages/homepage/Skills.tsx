@@ -28,7 +28,7 @@ const skills = [
 export default function Skills() {
 	return (
 		<section className="md:flex">
-			<h2 className="uppercase text-xl font-bold mb-2 md:mb-0 px-sm md:pl-12 md:pr-sm md:py-sm lg:py-10 lg:pl-lg lg:pr-6 md:bg-black-bean md:text-alabaster md:text-2xl md:leading-[2.25rem] md:border-r-2 md:border-alabaster md:w-[14.375rem] md:shrink-0 lg:size-max ">
+			<h2 className="uppercase text-xl mb-2 md:mb-0 px-sm md:pl-12 md:pr-sm md:py-sm lg:py-10 lg:pl-lg lg:pr-6 md:bg-black-bean md:text-alabaster md:text-2xl md:leading-[2.25rem] md:border-r-2 md:border-alabaster md:w-[14.375rem] md:shrink-0 lg:size-max ">
 				what i work with
 			</h2>
 			<div className="group py-6 md:py-0 bg-black-bean overflow-hidden md:flex md:items-center">
