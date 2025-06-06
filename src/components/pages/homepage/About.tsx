@@ -9,7 +9,7 @@ export default function About() {
 	const router = useRouter();
 
 	return (
-		<section className="px-sm py-[2rem] md:px-[6rem] lg:px-lg h-[calc(100vh-4.4375rem)] min-h-[35.625rem] md:h-[calc(100vh-4.9375rem)] flex flex-col-reverse md:flex-row justify-center md:justify-around items-center gap-4 md:gap-6 lg:gap-24">
+		<section className="px-sm py-[2rem] md:px-[6rem] lg:px-lg h-[calc(100vh-4.4375rem)] min-h-[35.625rem] md:h-[calc(100vh-4.9375rem)] flex flex-col-reverse md:flex-row justify-center md:justify-around items-center gap-4 md:gap-10 lg:gap-24">
 			<div className="flex-1 flex flex-col gap-6 md:gap-9 md:flex-1 md:max-w-[31.5625rem]">
 				<div className="flex flex-col items-center md:items-start md:gap-4">
 					<h1 className="capitalize flex items-baseline gap-1 md:gap-2">
@@ -20,7 +20,7 @@ export default function About() {
 							className="w-[1.5625rem] md:w-[1.9375rem] dark:invert"
 						/>
 					</h1>
-					<p className="px-2 md:px-0 max-w-[22.25rem] md:max-w-[31.5625rem] text-center text-[1.125rem] leading-[1.75rem] md:text-xl md:leading-[2.5rem] md:text-left">
+					<p className="px-2 md:px-0 max-w-[22.25rem] md:max-w-[31.5625rem] text-center text-[1.125rem] leading-[1.75rem] md:text-xl md:leading-[2.5rem] md:text-left md:mt-[-1rem]">
 						I&#39;m Ife, a full-stack software developer with a simple yet
 						powerful approach:{" "}
 						<span className="inline-block italic capitalize text-rose-red">
@@ -39,7 +39,7 @@ export default function About() {
 			<Image
 				src={profilePic}
 				alt="A picture of me, Ife!"
-				className="flex-1 h-12 md:h-auto w-auto md:w-full md:max-w-[18.75rem]"
+				className="flex-1 object-contain h-12 md:h-auto w-auto md:w-full md:max-h-full"
 			/>
 		</section>
 	);
