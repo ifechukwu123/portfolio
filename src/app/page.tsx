@@ -5,7 +5,7 @@ import Projects from "@/components/pages/homepage/Projects";
 
 export default function Home() {
 	return (
-		<main className="bg-alabaster dark:bg-licorice flex flex-col gap-[4.5rem]">
+		<main className="bg-alabaster dark:bg-licorice flex flex-col gap-[4.5rem] md:gap-24">
 			<About />
 			<Skills />
 			<Projects />

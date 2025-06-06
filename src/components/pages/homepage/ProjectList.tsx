@@ -12,23 +12,23 @@ export default function ProjectList() {
 	return (
 		<ul
 			role="list"
-			className="flex flex-col gap-24 items-center *:flex *:flex-col *:items-center *:gap-4"
+			className="flex flex-col md:flex-row gap-24 md:gap-0 md:justify-between items-center *:flex *:flex-col *:items-center *:gap-4"
 		>
 			<li role="listitem">
 				<Link
 					href="/projects/system_of_silk"
-					className="border border-licorice rounded-md w-[75vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
+					className="border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
 				>
 					<Image
 						src={projectImage}
 						alt="Snapshot of the System of Silk project"
 						className="flex-1 rounded-t-md"
 					/>
-					<h3 className="py-3 border-t border-licorice flex-shrink-0">
+					<h3 className="py-3 md:py-2 border-t border-licorice flex-shrink-0">
 						System of Silk
 					</h3>
 				</Link>
-				<div className="*:w-5 flex gap-2">
+				<div className="*:w-5 md:*:w-6 flex gap-4">
 					{/* Add tooltip */}
 					<Image src={typescriptIcon} alt="Typescript" />
 					<Image src={nextjsIcon} alt="Nextjs" />
@@ -39,18 +39,18 @@ export default function ProjectList() {
 			<li role="listitem">
 				<Link
 					href="/projects/beauty_bin"
-					className="border border-licorice rounded-md w-[75vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
+					className="border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
 				>
 					<Image
 						src={projectImage}
 						alt="Snapshot of the System of Silk project"
 						className="flex-1 rounded-t-md"
 					/>
-					<h3 className="py-3 border-t border-licorice flex-shrink-0">
+					<h3 className="py-3 md:py-2 border-t border-licorice flex-shrink-0">
 						Beauty Bin
 					</h3>
 				</Link>
-				<div className="*:w-5 flex gap-2">
+				<div className="*:w-5 md:*:w-6 flex gap-4">
 					<Image src={javascriptIcon} alt="Javascript" />
 					<Image src={reactIcon} alt="React" />
 					<Image src={nodejsIcon} alt="Nodejs" />
@@ -59,18 +59,18 @@ export default function ProjectList() {
 			<li role="listitem">
 				<Link
 					href="/projects/instock"
-					className="border border-licorice rounded-md w-[75vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
+					className="border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
 				>
 					<Image
 						src={projectImage}
 						alt="Snapshot of the System of Silk project"
 						className="flex-1 rounded-t-md"
 					/>
-					<h3 className="py-3 border-t border-licorice flex-shrink-0">
+					<h3 className="py-3 md:py-2 border-t border-licorice flex-shrink-0">
 						Instock
 					</h3>
 				</Link>
-				<div className="*:w-5 flex gap-2">
+				<div className="*:w-5 md:*:w-6 flex gap-4">
 					<Image src={javascriptIcon} alt="Javascript" />
 					<Image src={reactIcon} alt="React" />
 					<Image src={nodejsIcon} alt="Nodejs" />

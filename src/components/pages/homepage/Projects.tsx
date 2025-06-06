@@ -7,14 +7,22 @@ export default function Projects() {
 	const router = useRouter();
 
 	return (
-		<section className="px-sm md:px-md flex flex-col gap-12">
-			<h2 className="border-b-2 border-dashed border-licorice pb-3 capitalize text-center md:text-left">
-				browse my projects
-			</h2>
+		<section className="px-sm md:px-md flex flex-col gap-12 md:gap-[4.5rem]">
+			<header className="pb-3 border-b-2 border-dashed border-licorice md:flex md:justify-between md:items-center">
+				<h2 className=" capitalize text-center md:text-left">
+					browse my projects
+				</h2>
+				<Button
+					onClick={() => router.push("/projects")}
+					classname="hidden md:flex"
+				>
+					view all projects
+				</Button>
+			</header>
 			<ProjectList />
 			<Button
 				onClick={() => router.push("/projects")}
-				classname="self-center my-6"
+				classname="self-center my-6 md:hidden"
 			>
 				view all projects
 			</Button>

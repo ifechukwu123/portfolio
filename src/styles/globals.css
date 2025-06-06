@@ -11,11 +11,11 @@
 	h1,
 	h2,
 	h3 {
-		@apply font-heading font-semibold;
+		@apply font-heading font-normal;
 	}
 
 	h1 {
-		@apply font-normal text-[3.5rem] leading-[5.25rem] md:text-[4.5rem] md:leading-[6.75rem];
+		@apply font-semibold text-[3.5rem] leading-[5.25rem] md:text-[4.5rem] md:leading-[6.75rem];
 	}
 
 	h2 {
