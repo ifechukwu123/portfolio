@@ -48,7 +48,7 @@ export default function Header() {
 							alt="Logo for Ife Onuorah"
 							className="hidden dark:block lg:w-[12.0625rem]"
 						/>
-						<span className="block text-[0.75rem] text-licorice/50 dark:text-alabaster capitalize ">
+						<span className="block mt-[-4px] text-[0.75rem] text-licorice/50 dark:text-alabaster capitalize">
 							software developer{" "}
 							<span className="text-apple-green italic">+ dreamer</span>
 						</span>
@@ -60,7 +60,7 @@ export default function Header() {
 					aria-label="Main"
 					className="hidden absolute inset-0 md:flex justify-center items-center"
 				>
-					<ul role="list" className="flex capitalize gap-5">
+					<ul role="list" className="flex capitalize gap-5 lg:gap-9">
 						<li role="listitem">
 							<Link href="/projects" className="py-3">
 								projects
