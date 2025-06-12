@@ -41,14 +41,14 @@ export default function Header() {
 						<Image
 							src={Logo}
 							alt="Logo for Ife Onuorah"
-							className="dark:hidden lg:w-[12.0625rem]"
+							className="dark:hidden w-[9.1875rem] lg:w-[12.0625rem]"
 						/>
 						<Image
 							src={LogoDark}
 							alt="Logo for Ife Onuorah"
-							className="hidden dark:block lg:w-[12.0625rem]"
+							className="hidden dark:block w-[9.1875rem] lg:w-[12.0625rem]"
 						/>
-						<span className="block mt-[-4px] text-[0.75rem] text-licorice/50 dark:text-alabaster capitalize">
+						<span className="block mt-[-4px] text-[0.75rem] text-licorice/60 dark:text-alabaster capitalize">
 							software developer{" "}
 							<span className="text-apple-green italic">+ dreamer</span>
 						</span>

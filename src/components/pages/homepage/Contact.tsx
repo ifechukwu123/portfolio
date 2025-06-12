@@ -11,7 +11,7 @@ export default function Contact() {
 				Looking for a developer who notices the small things?{" "}
 				<span className="inline-block">That&apos;s me!!</span>
 			</h2>
-			<p className="text-center leading-[1.875rem] md:leading-[2.25rem] w-[80vw] md:w-[75vw] max-w-[30.75rem] md:max-w-[36.25rem] lg:max-w-[46.875rem]">
+			<p className="text-center leading-[1.875rem] md:leading-[2.25rem] w-[80vw] md:w-[75vw] max-w-[30.75rem] md:max-w-[36.25rem] lg:max-w-[50rem]">
 				I have a sharp eye for detail and design, a solid full-stack foundation,
 				and a love for learning. I&apos;m excited to collaborate and bring ideas
 				to life—and I&apos;m looking for new opportunities to do just that.

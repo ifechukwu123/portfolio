@@ -7,8 +7,8 @@ export default function Projects() {
 	const router = useRouter();
 
 	return (
-		<section className="px-sm md:px-md flex flex-col gap-12 md:gap-[4.5rem]">
-			<header className="pb-3 border-b-2 border-dashed border-licorice md:flex md:justify-between md:items-center">
+		<section className="px-sm md:px-md lg:px-lg flex flex-col gap-12 md:gap-[4.5rem] lg:gap-20">
+			<header className="pb-3 border-b-2 border-dashed border-licorice dark:border-alabaster md:flex md:justify-between md:items-center">
 				<h2 className=" capitalize text-center md:text-left">
 					browse my projects
 				</h2>
@@ -26,7 +26,7 @@ export default function Projects() {
 			>
 				view all projects
 			</Button>
-			<div className="border-b-2 border-dashed border-licorice"></div>
+			<div className="border-b-2 border-dashed border-licorice dark:border-alabaster"></div>
 		</section>
 	);
 }

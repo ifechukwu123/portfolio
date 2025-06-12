@@ -17,14 +17,14 @@ export default function ProjectList() {
 			<li role="listitem">
 				<Link
 					href="/projects/system_of_silk"
-					className="border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
+					className="dark:bg-alabaster dark:text-licorice border border-licorice  rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
 				>
 					<Image
 						src={projectImage}
 						alt="Snapshot of the System of Silk project"
 						className="flex-1 rounded-t-md"
 					/>
-					<h3 className="py-3 md:py-2 border-t border-licorice flex-shrink-0">
+					<h3 className="py-3 lg:py-4 border-t border-licorice  flex-shrink-0">
 						System of Silk
 					</h3>
 				</Link>
@@ -39,14 +39,14 @@ export default function ProjectList() {
 			<li role="listitem">
 				<Link
 					href="/projects/beauty_bin"
-					className="border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
+					className="dark:bg-alabaster dark:text-licorice border border-licorice  rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
 				>
 					<Image
 						src={projectImage}
 						alt="Snapshot of the System of Silk project"
 						className="flex-1 rounded-t-md"
 					/>
-					<h3 className="py-3 md:py-2 border-t border-licorice flex-shrink-0">
+					<h3 className="py-3 lg:py-4 border-t border-licorice  flex-shrink-0">
 						Beauty Bin
 					</h3>
 				</Link>
@@ -59,14 +59,14 @@ export default function ProjectList() {
 			<li role="listitem">
 				<Link
 					href="/projects/instock"
-					className="border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
+					className="dark:bg-alabaster dark:text-licorice border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
 				>
 					<Image
 						src={projectImage}
 						alt="Snapshot of the System of Silk project"
 						className="flex-1 rounded-t-md"
 					/>
-					<h3 className="py-3 md:py-2 border-t border-licorice flex-shrink-0">
+					<h3 className="py-3 lg:py-4 border-t border-licorice  flex-shrink-0">
 						Instock
 					</h3>
 				</Link>

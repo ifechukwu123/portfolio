@@ -32,16 +32,24 @@ export default function Footer() {
 								className="capitalize flex flex-col gap-2 md:px-4 md:border-r md:border-alabaster md:text-center"
 							>
 								<li role="listitem" className="hover:underline">
-									<Link href="/">home</Link>
+									<Link href="/" className="block py-1">
+										home
+									</Link>
 								</li>
 								<li role="listitem" className="hover:underline">
-									<Link href="/projects">projects</Link>
+									<Link href="/projects" className="block py-1">
+										projects
+									</Link>
 								</li>
 								<li role="listitem" className="hover:underline">
-									<Link href="/about">about</Link>
+									<Link href="/about" className="block py-1">
+										about
+									</Link>
 								</li>
 								<li role="listitem" className="hover:underline">
-									<Link href="contact">contact</Link>
+									<Link href="contact" className="block py-1">
+										contact
+									</Link>
 								</li>
 							</ul>
 						</nav>
