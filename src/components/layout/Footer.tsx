@@ -31,16 +31,16 @@ export default function Footer() {
 								role="list"
 								className="capitalize flex flex-col gap-2 md:px-4 md:border-r md:border-alabaster md:text-center"
 							>
-								<li role="listitem">
+								<li role="listitem" className="hover:underline">
 									<Link href="/">home</Link>
 								</li>
-								<li role="listitem">
+								<li role="listitem" className="hover:underline">
 									<Link href="/projects">projects</Link>
 								</li>
-								<li role="listitem">
+								<li role="listitem" className="hover:underline">
 									<Link href="/about">about</Link>
 								</li>
-								<li role="listitem">
+								<li role="listitem" className="hover:underline">
 									<Link href="contact">contact</Link>
 								</li>
 							</ul>
