@@ -117,9 +117,11 @@ export default function Header() {
 					</button>
 					<button
 						className="p-2.5 md:hidden"
-						aria-label="Display menu"
+						aria-label={
+							isMenuOpen ? "Hide menu options" : "Display menu options"
+						}
 						onClick={() => {
-							setIsMenuOpen(isMenuOpen);
+							setIsMenuOpen(!isMenuOpen);
 						}}
 					>
 						<Image
@@ -131,6 +133,66 @@ export default function Header() {
 					</button>
 				</div>
 			</div>
+
+			{/* mobile menu navigation links */}
+			{isMenuOpen && (
+				<nav
+					aria-label="Main"
+					className="absolute left-0 right-0 bg-alabaster dark:bg-licorice px-sm py-6  h-[calc(100vh-4.4375rem)]"
+				>
+					<ul
+						role="list"
+						className="flex flex-col gap-6 text-[30px] font-light uppercase "
+					>
+						<li role="listitem">
+							<Link
+								href="/projects"
+								className="block py-4"
+								onClick={() => {
+									setIsMenuOpen(false);
+								}}
+							>
+								projects
+							</Link>
+						</li>
+						<li role="listitem">
+							<Link
+								href="/about"
+								className="block py-4"
+								onClick={() => {
+									setIsMenuOpen(false);
+								}}
+							>
+								about
+							</Link>
+						</li>
+						<li role="listitem">
+							<Link
+								href="/contact"
+								className="block py-4"
+								onClick={() => {
+									setIsMenuOpen(false);
+								}}
+							>
+								contact
+							</Link>
+						</li>
+						<li role="listitem">
+							<a
+								href="/files/Ife_Onuorah_Resume.pdf"
+								target="_blank"
+								type="application/pdf"
+								className="block py-4"
+								onClick={() => {
+									setIsMenuOpen(false);
+								}}
+							>
+								resume
+							</a>
+						</li>
+					</ul>
+				</nav>
+			)}
 		</header>
 	);
 }
