@@ -21,6 +21,23 @@ export default function Header() {
 	}, []);
 
 	useEffect(() => {
+		//Keep track of screen size to display mobile menu
+		function checkScreenSize() {
+			if (window.innerWidth >= 768) {
+				setIsMenuOpen(false);
+			}
+		}
+
+		checkScreenSize();
+
+		window.addEventListener("resize", checkScreenSize);
+
+		return () => {
+			window.removeEventListener("resize", checkScreenSize);
+		};
+	}, []);
+
+	useEffect(() => {
 		//Prevent background from scrolling when mobile menu is open
 		if (isMenuOpen) {
 			document.body.classList.add("overflow-hidden");
