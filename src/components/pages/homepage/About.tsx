@@ -3,7 +3,7 @@ import { useRouter } from "next/navigation";
 import SmileIcon from "/public/icons/smiling-emoji.svg?url";
 import Image from "next/image";
 import profilePic from "/public/images/profile.jpg";
-import Button from "components/Button";
+import Button from "@/components/ui/Button";
 
 export default function About() {
 	const router = useRouter();

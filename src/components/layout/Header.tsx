@@ -2,11 +2,13 @@
 import MenuIcon from "/public/icons/menu.svg?url";
 import SunIcon from "/public/icons/sun.svg?url";
 import MoonIcon from "/public/icons/moon.svg?url";
+import XIcon from "/public/icons/x.svg?url";
 import MobileLogo from "/public/logo/mobile.svg?url";
 import MobileLogoDark from "/public/logo/mobile-dark.svg?url";
 import Logo from "/public/logo/tablet.svg?url";
 import LogoDark from "/public/logo/tablet-dark.svg?url";
 import Link from "next/link";
+import IconButton from "components/ui/IconButton";
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
@@ -18,6 +20,19 @@ export default function Header() {
 		setIsLightMode(!document.documentElement.classList.contains("dark"));
 	}, []);
 
+	useEffect(() => {
+		//Prevent background from scrolling when mobile menu is open
+		if (isMenuOpen) {
+			document.body.classList.add("overflow-hidden");
+		} else {
+			document.body.classList.remove("overflow-hidden");
+		}
+
+		return () => {
+			document.body.classList.remove("overflow-hidden");
+		};
+	}, [isMenuOpen]);
+
 	return (
 		<header className="relative px-sm md:px-md lg:px-lg bg-alabaster dark:bg-licorice md:text-base lg:text-xl">
 			{/* header wrapper */}
@@ -25,29 +40,21 @@ export default function Header() {
 				{/* Logo */}
 				<Link href="/" className="z-10">
 					{/* mobile logos */}
+
 					<Image
-						src={MobileLogo}
+						src={isLightMode ? MobileLogo : MobileLogoDark}
 						alt="Logo for Ife Onuorah"
-						className="dark:hidden md:hidden"
-					/>
-					<Image
-						src={MobileLogoDark}
-						alt="Logo for Ife Onuorah"
-						className="hidden dark:block dark:md:hidden"
+						className="md:hidden"
 					/>
 
 					{/* tablet/desktop logos */}
 					<div className="hidden md:block">
 						<Image
-							src={Logo}
+							src={isLightMode ? Logo : LogoDark}
 							alt="Logo for Ife Onuorah"
-							className="dark:hidden w-[9.1875rem] lg:w-[12.0625rem]"
+							className="w-[9.1875rem] lg:w-[12.0625rem]"
 						/>
-						<Image
-							src={LogoDark}
-							alt="Logo for Ife Onuorah"
-							className="hidden dark:block w-[9.1875rem] lg:w-[12.0625rem]"
-						/>
+
 						<span className="block mt-[-4px] text-[0.75rem] text-licorice/60 dark:text-alabaster capitalize">
 							software developer{" "}
 							<span className="text-apple-green italic">+ dreamer</span>
@@ -91,108 +98,110 @@ export default function Header() {
 
 				{/* theme & mobile menu options */}
 				<div className="flex gap-4 z-10">
-					<button
-						className="p-2.5"
-						aria-label={
-							isLightMode ? "Change to Dark Mode" : "Change to Light Mode"
-						}
+					<IconButton
 						onClick={() => {
 							setIsLightMode(!isLightMode);
 							document.documentElement.classList.toggle("dark");
 							localStorage.setItem("theme", isLightMode ? "dark" : "light");
 						}}
-					>
-						<Image
-							src={SunIcon}
-							alt=""
-							aria-hidden="true"
-							className="dark:hidden w-[1.5625rem]"
-						/>
-						<Image
-							src={MoonIcon}
-							alt=""
-							aria-hidden="true"
-							className="hidden dark:block w-[1.5625rem]"
-						/>
-					</button>
-					<button
-						className="p-2.5 md:hidden"
-						aria-label={
-							isMenuOpen ? "Hide menu options" : "Display menu options"
+						ariaLabel={
+							isLightMode ? "Change to Dark Mode" : "Change to Light Mode"
 						}
+						icon={isLightMode ? SunIcon : MoonIcon}
+					/>
+					<IconButton
+						classname="md:hidden"
+						ariaLabel={"Display menu options"}
 						onClick={() => {
-							setIsMenuOpen(!isMenuOpen);
+							setIsMenuOpen(true);
 						}}
-					>
-						<Image
-							src={MenuIcon}
-							alt=""
-							aria-hidden="true"
-							className="dark:invert"
-						/>
-					</button>
+						icon={MenuIcon}
+					/>
+
+					{/* mobile menu navigation links */}
+					{isMenuOpen && (
+						<div className=" bg-alabaster dark:bg-licorice fixed left-0 top-0 h-full w-full z-20 px-sm">
+							<div className="py-3 flex justify-between items-center">
+								{/* Logo */}
+								<Link
+									href="/"
+									onClick={() => {
+										setIsMenuOpen(false);
+									}}
+								>
+									<Image
+										src={isLightMode ? MobileLogo : MobileLogoDark}
+										alt="Logo for Ife Onuorah"
+									/>
+								</Link>
+								<IconButton
+									onClick={() => {
+										setIsMenuOpen(false);
+									}}
+									ariaLabel="Hide menu options"
+									icon={XIcon}
+								/>
+							</div>
+							<nav
+								aria-label="Main"
+								className="py-6  h-[calc(100vh-4.4375rem)]"
+							>
+								<ul
+									role="list"
+									className="flex flex-col gap-7 text-[30px] font-light uppercase "
+								>
+									<li role="listitem">
+										<Link
+											href="/projects"
+											className="block py-4"
+											onClick={() => {
+												setIsMenuOpen(false);
+											}}
+										>
+											projects
+										</Link>
+									</li>
+									<li role="listitem">
+										<Link
+											href="/about"
+											className="block py-4"
+											onClick={() => {
+												setIsMenuOpen(false);
+											}}
+										>
+											about
+										</Link>
+									</li>
+									<li role="listitem">
+										<Link
+											href="/contact"
+											className="block py-4"
+											onClick={() => {
+												setIsMenuOpen(false);
+											}}
+										>
+											contact
+										</Link>
+									</li>
+									<li role="listitem">
+										<a
+											href="/files/Ife_Onuorah_Resume.pdf"
+											target="_blank"
+											type="application/pdf"
+											className="block py-4"
+											onClick={() => {
+												setIsMenuOpen(false);
+											}}
+										>
+											resume
+										</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					)}
 				</div>
 			</div>
-
-			{/* mobile menu navigation links */}
-			{isMenuOpen && (
-				<nav
-					aria-label="Main"
-					className="absolute left-0 right-0 bg-alabaster dark:bg-licorice px-sm py-6  h-[calc(100vh-4.4375rem)]"
-				>
-					<ul
-						role="list"
-						className="flex flex-col gap-6 text-[30px] font-light uppercase "
-					>
-						<li role="listitem">
-							<Link
-								href="/projects"
-								className="block py-4"
-								onClick={() => {
-									setIsMenuOpen(false);
-								}}
-							>
-								projects
-							</Link>
-						</li>
-						<li role="listitem">
-							<Link
-								href="/about"
-								className="block py-4"
-								onClick={() => {
-									setIsMenuOpen(false);
-								}}
-							>
-								about
-							</Link>
-						</li>
-						<li role="listitem">
-							<Link
-								href="/contact"
-								className="block py-4"
-								onClick={() => {
-									setIsMenuOpen(false);
-								}}
-							>
-								contact
-							</Link>
-						</li>
-						<li role="listitem">
-							<a
-								href="/files/Ife_Onuorah_Resume.pdf"
-								target="_blank"
-								type="application/pdf"
-								className="block py-4"
-								onClick={() => {
-									setIsMenuOpen(false);
-								}}
-							>
-								resume
-							</a>
-						</li>
-					</ul>
-				</nav>
-			)}
 		</header>
 	);
 }

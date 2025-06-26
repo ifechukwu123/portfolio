@@ -51,15 +51,12 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	const setTheme = `const userPreference = localStorage.getItem("theme");
-	const systemPreference = window.matchMedia(
-		"(prefers-color-scheme:dark)"
-	).matches;
-
-	if (userPreference === "dark" || (!userPreference && systemPreference)) {
-		document.documentElement.classList.add("dark");
-	} else {
-		document.documentElement.classList.remove("dark");
-	}`; //need to fix the jumpiness
+					  const systemPreference = window.matchMedia("(prefers-color-scheme:dark)").matches;
+					  if (userPreference === "dark" || (!userPreference && systemPreference)) {
+					  	document.documentElement.classList.add("dark");
+					  } else {
+						document.documentElement.classList.remove("dark");
+					  }`; //need to fix the jumpiness
 
 	return (
 		<html

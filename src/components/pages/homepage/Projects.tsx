@@ -1,6 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
-import Button from "components/Button";
+import Button from "@/components/ui/Button";
 import ProjectList from "@/components/pages/homepage/ProjectList";
 
 export default function Projects() {
