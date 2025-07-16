@@ -5,13 +5,15 @@ interface IconButtonPropTypes {
 	onClick: () => void;
 	ariaLabel: string;
 	icon: StaticImageData;
+	iconSize: "small" | "regular";
 }
 
-export default function Button({
+export default function IconButton({
 	classname,
 	onClick,
 	ariaLabel,
 	icon,
+	iconSize,
 }: IconButtonPropTypes) {
 	return (
 		<button
@@ -23,7 +25,11 @@ export default function Button({
 				src={icon}
 				alt=""
 				aria-hidden="true"
-				className="w-[1.5625rem] h-[1.5625rem] dark:invert"
+				className={`${
+					iconSize == "small"
+						? "w-[1.125rem] h-[1.125rem]"
+						: "w-[1.5625rem] h-[1.5625rem]"
+				} dark:invert`}
 			/>
 		</button>
 	);

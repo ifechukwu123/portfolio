@@ -125,6 +125,7 @@ export default function Header() {
 							isLightMode ? "Change to Dark Mode" : "Change to Light Mode"
 						}
 						icon={isLightMode ? SunIcon : MoonIcon}
+						iconSize="regular"
 					/>
 					<IconButton
 						classname="md:hidden"
@@ -133,6 +134,7 @@ export default function Header() {
 							setIsMenuOpen(true);
 						}}
 						icon={MenuIcon}
+						iconSize="regular"
 					/>
 
 					{/* mobile menu navigation links */}
@@ -157,6 +159,7 @@ export default function Header() {
 									}}
 									ariaLabel="Hide menu options"
 									icon={XIcon}
+									iconSize="regular"
 								/>
 							</div>
 							<nav
