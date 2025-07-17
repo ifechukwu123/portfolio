@@ -14,7 +14,7 @@ export default function Projects() {
 				role="list"
 			>
 				{ProjectsData.map((project) => (
-					<li key={project.id} role="listitem">
+					<li key={project.id}>
 						<ProjectCard
 							name={project.name}
 							description={project.description}
