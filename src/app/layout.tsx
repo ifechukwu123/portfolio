@@ -74,7 +74,9 @@ export default function RootLayout({
 			</head>
 			<body>
 				<Header />
-				{children}
+				<main className="bg-alabaster dark:bg-licorice min-h-[calc(100vh-4.4375rem)] md:min-h-[calc(100vh-4.6875rem)] lg:min-h-[calc(100vh-5.5rem)]">
+					{children}
+				</main>
 				<Footer />
 			</body>
 		</html>

@@ -5,11 +5,11 @@ import Projects from "@/components/pages/homepage/Projects";
 
 export default function Home() {
 	return (
-		<main className="bg-alabaster dark:bg-licorice flex flex-col gap-[4.5rem] md:gap-24 lg:gap-32">
+		<div className=" flex flex-col gap-[4.5rem] md:gap-24 lg:gap-32">
 			<About />
 			<Skills />
 			<Projects />
 			<Contact />
-		</main>
+		</div>
 	);
 }
