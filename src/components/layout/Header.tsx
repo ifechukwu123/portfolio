@@ -85,22 +85,22 @@ export default function Header() {
 					className="hidden absolute inset-0 md:flex justify-center items-center"
 				>
 					<ul role="list" className="flex capitalize gap-5 lg:gap-9">
-						<li role="listitem">
+						<li>
 							<Link href="/projects" className="py-3">
 								projects
 							</Link>
 						</li>
-						<li role="listitem">
+						<li>
 							<Link href="/about" className="py-3">
 								about
 							</Link>
 						</li>
-						<li role="listitem">
+						<li>
 							<Link href="/contact" className="py-3">
 								contact
 							</Link>
 						</li>
-						<li role="listitem">
+						<li>
 							<a
 								href="/files/Ife_Onuorah_Resume.pdf"
 								target="_blank"
@@ -170,7 +170,7 @@ export default function Header() {
 									role="list"
 									className="flex flex-col gap-7 text-[30px] font-light uppercase "
 								>
-									<li role="listitem">
+									<li>
 										<Link
 											href="/projects"
 											className="block py-4"
@@ -181,7 +181,7 @@ export default function Header() {
 											projects
 										</Link>
 									</li>
-									<li role="listitem">
+									<li>
 										<Link
 											href="/about"
 											className="block py-4"
@@ -192,7 +192,7 @@ export default function Header() {
 											about
 										</Link>
 									</li>
-									<li role="listitem">
+									<li>
 										<Link
 											href="/contact"
 											className="block py-4"
@@ -203,7 +203,7 @@ export default function Header() {
 											contact
 										</Link>
 									</li>
-									<li role="listitem">
+									<li>
 										<a
 											href="/files/Ife_Onuorah_Resume.pdf"
 											target="_blank"

@@ -21,11 +21,11 @@ export default function ProjectCard({
 	link,
 }: ProjectCardProps) {
 	return (
-		<Link href={`/projects/${routeName}`} className="group">
-			<article className="p-4 border border-licorice rounded-[0.5rem] flex gap-4 items-center relative">
+		<Link href={`/projects/${routeName}`} className="group block h-full">
+			<article className="h-full p-4 border border-licorice rounded-[0.5rem] flex gap-4 items-center relative">
 				<Image
 					src={iconImage}
-					alt={`Icon for ${name} project`}
+					alt={`${name} Logo`}
 					className="w-[3.75rem] h-[3.75rem] border border-licorice rounded-[0.5rem]"
 				/>
 				<div className="flex flex-col gap-1">

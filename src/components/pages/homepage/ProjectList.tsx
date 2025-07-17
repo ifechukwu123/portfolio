@@ -14,7 +14,7 @@ export default function ProjectList() {
 			role="list"
 			className="flex flex-col md:flex-row gap-24 md:gap-0 md:justify-between items-center *:flex *:flex-col *:items-center *:gap-4"
 		>
-			<li role="listitem">
+			<li>
 				<Link
 					href="/projects/system_of_silk"
 					className="dark:bg-alabaster dark:text-licorice border border-licorice  rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
@@ -36,7 +36,7 @@ export default function ProjectList() {
 					<Image src={nodejsIcon} alt="Nodejs" />
 				</div>
 			</li>
-			<li role="listitem">
+			<li>
 				<Link
 					href="/projects/beauty_bin"
 					className="dark:bg-alabaster dark:text-licorice border border-licorice  rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"
@@ -56,7 +56,7 @@ export default function ProjectList() {
 					<Image src={nodejsIcon} alt="Nodejs" />
 				</div>
 			</li>
-			<li role="listitem">
+			<li>
 				<Link
 					href="/projects/instock"
 					className="dark:bg-alabaster dark:text-licorice border border-licorice rounded-md w-[75vw] md:w-[28vw] max-w-[25rem] aspect-square text-center flex flex-col h-full"

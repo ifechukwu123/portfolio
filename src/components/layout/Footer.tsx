@@ -31,22 +31,22 @@ export default function Footer() {
 								role="list"
 								className="capitalize flex flex-col gap-2 md:px-4 md:border-r md:border-alabaster md:text-center"
 							>
-								<li role="listitem" className="hover:underline">
+								<li className="hover:underline">
 									<Link href="/" className="block py-1">
 										home
 									</Link>
 								</li>
-								<li role="listitem" className="hover:underline">
+								<li className="hover:underline">
 									<Link href="/projects" className="block py-1">
 										projects
 									</Link>
 								</li>
-								<li role="listitem" className="hover:underline">
+								<li className="hover:underline">
 									<Link href="/about" className="block py-1">
 										about
 									</Link>
 								</li>
-								<li role="listitem" className="hover:underline">
+								<li className="hover:underline">
 									<Link href="contact" className="block py-1">
 										contact
 									</Link>
@@ -61,12 +61,12 @@ export default function Footer() {
 								<Image src={SmileIcon} alt="Smiling face emoji" />
 							</span>
 							<ul role="list" className="flex gap-2">
-								<li role="listitem">
+								<li>
 									<a href="mailto:ifeonuorah@gmail.com">
 										<Image src={emailIcon} alt="Send an email" />
 									</a>
 								</li>
-								<li role="listitem">
+								<li>
 									<a
 										href="https://www.linkedin.com/in/ifeonuorah/"
 										target="_blank"
@@ -77,7 +77,7 @@ export default function Footer() {
 										/>
 									</a>
 								</li>
-								<li role="listitem">
+								<li>
 									<a
 										href="https://www.github.com/ifechukwu123/"
 										target="_blank"
@@ -85,12 +85,12 @@ export default function Footer() {
 										<Image src={githubIcon} alt="Check out my github" />
 									</a>
 								</li>
-								<li role="listitem">
+								<li>
 									<a href="http://ifeonuorah.com/">
 										<Image src={websiteIcon} alt="Visit my website" />
 									</a>
 								</li>
-								<li role="listitem">
+								<li>
 									<a
 										href="https://www.instagram.com/berrifantasyyyy/"
 										target="_blank"

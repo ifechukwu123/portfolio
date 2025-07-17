@@ -38,7 +38,7 @@ export default function Skills() {
 				>
 					{/* Duplicate for marquee animation */}
 					{[...skills, ...skills].map((skill, index) => (
-						<li key={`${skill.id}-${index}`} role="listitem">
+						<li key={`${skill.id}-${index}`}>
 							<Tool name={skill.name} image={skill.image} />
 						</li>
 					))}
