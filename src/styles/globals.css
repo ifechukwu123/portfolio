@@ -15,7 +15,7 @@
 	}
 
 	h1 {
-		@apply font-semibold text-[3rem] leading-[4.5rem] md:text-[3.5rem] md:leading-[5.25rem] lg:text-[4rem] lg:leading-[6rem];
+		@apply text-[3rem] leading-[4.5rem] md:text-[3.5rem] md:leading-[5.25rem] lg:text-[4rem] lg:leading-[6rem];
 	}
 
 	h2 {
