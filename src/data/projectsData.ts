@@ -2,6 +2,7 @@ import { StaticImageData } from "next/image";
 import projectImage from "/public/images/project.png";
 
 interface Project {
+	id: number;
 	name: string;
 	slug: string; //for dynamic routing
 	description: string;
@@ -10,16 +11,17 @@ interface Project {
 	image: StaticImageData;
 }
 
-export const Projects: Project[] = [
+export const ProjectsData: Project[] = [
 	{
+		id: 1,
 		name: "System of Silk",
 		slug: "system_of_silk",
-		description:
-			"Access exclusive workout videos, create custom playlists, and follow the unique boxing fitness method by Michael 'Silk' Olajide Jr.",
+		description: "Exclusive boxing workouts by Michael ‘Silk’ Olajide Jr.",
 		deployedLink: "https://systemofsilk.com/",
 		image: projectImage,
 	},
 	{
+		id: 2,
 		name: "Beauty Bin",
 		slug: "beauty_bin",
 		description: "Track expiration date of makeup products",
@@ -27,6 +29,7 @@ export const Projects: Project[] = [
 		image: projectImage,
 	},
 	{
+		id: 3,
 		name: "Instock",
 		slug: "instock",
 		description: "Full-Stack inventory management system",

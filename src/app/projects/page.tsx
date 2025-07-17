@@ -1,28 +1,27 @@
-import BeautyBinIcon from "/public/images/project.png";
 import ProjectCard from "@/components/pages/projects/ProjectCard";
+import { ProjectsData } from "data/projectsData";
 
 export default function Projects() {
 	return (
-		<main className="bg-alabaster dark:bg-licorice min-h-[calc(100vh-4.4375rem)] px-sm pt-8 pb-16 flex flex-col gap-12">
+		<main className="bg-alabaster dark:bg-licorice min-h-[calc(100vh-4.4375rem)] md:min-h-[calc(100vh-4.6875rem)] px-sm pt-8 pb-24 md:px-md md:pt-16 md:pb-40 flex flex-col gap-12">
 			<header>
 				<h1 className="font-normal uppercase">projects</h1>
 				<p>Check out some of my favourite projects.</p>
 			</header>
 
-			<div className="flex flex-col gap-8">
-				<ProjectCard
-					name="Beauty Bin"
-					description="Funsies"
-					iconImage={BeautyBinIcon}
-					link="https://fonts.google.com/"
-				/>
-				<ProjectCard
-					name="Beauty Bin"
-					description="Funsies"
-					iconImage={BeautyBinIcon}
-					link="https://fonts.google.com/"
-				/>
-			</div>
+			<ul className="grid grid-cols-1 gap-8 md:grid-cols-2" role="list">
+				{ProjectsData.map((project) => (
+					<li key={project.id} role="listitem">
+						<ProjectCard
+							name={project.name}
+							description={project.description}
+							iconImage={project.image}
+							routeName={project.slug}
+							link={project.deployedLink}
+						/>
+					</li>
+				))}
+			</ul>
 		</main>
 	);
 }

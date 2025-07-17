@@ -8,6 +8,7 @@ interface ProjectCardProps {
 	name: string;
 	description: string;
 	iconImage: StaticImageData;
+	routeName: string;
 	// colour: string;    //Add colour for different projects. Maybe on hover.
 	link?: string;
 }
@@ -16,10 +17,9 @@ export default function ProjectCard({
 	name,
 	description,
 	iconImage,
+	routeName,
 	link,
 }: ProjectCardProps) {
-	const routeName = name.replaceAll(" ", "_");
-
 	return (
 		<Link href={`/projects/${routeName}`} className="group">
 			<article className="p-4 border border-licorice rounded-[0.5rem] flex gap-4 items-center relative">
@@ -30,7 +30,7 @@ export default function ProjectCard({
 				/>
 				<div className="flex flex-col gap-1">
 					<h2 className="text-2xl">{name}</h2>
-					<p>{description}</p>
+					<p className="text-base">{description}</p>
 				</div>
 				{link && (
 					<IconButton
