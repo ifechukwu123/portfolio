@@ -9,20 +9,20 @@ import nodejsIcon from "/public/icons/tools/nodejs.svg?url";
 import pythonIcon from "/public/icons/tools/python.svg?url";
 import tailwindIcon from "/public/icons/tools/tailwind.svg?url";
 import typescriptIcon from "/public/icons/tools/typescript.svg?url";
-import Tool from "@/components/pages/homepage/Tool";
+import Tool from "@/components/ui/Tool";
 
 const skills = [
-	{ id: 1, name: "React", image: reactIcon },
-	{ id: 2, name: "HTML5", image: htmlIcon },
-	{ id: 3, name: "Javascript", image: javascriptIcon },
-	{ id: 4, name: "Github", image: githubIcon },
-	{ id: 5, name: "Typescript", image: typescriptIcon },
-	{ id: 6, name: "Git", image: gitIcon },
-	{ id: 7, name: "Next.js", image: nextjsIcon },
-	{ id: 8, name: "Tailwind", image: tailwindIcon },
-	{ id: 9, name: "Node.js", image: nodejsIcon },
-	{ id: 10, name: "Python", image: pythonIcon },
-	{ id: 11, name: "Figma", image: figmaIcon },
+	{ id: 1, name: "React", icon: reactIcon },
+	{ id: 2, name: "HTML5", icon: htmlIcon },
+	{ id: 3, name: "Javascript", icon: javascriptIcon },
+	{ id: 4, name: "Github", icon: githubIcon },
+	{ id: 5, name: "Typescript", icon: typescriptIcon },
+	{ id: 6, name: "Git", icon: gitIcon },
+	{ id: 7, name: "Next.js", icon: nextjsIcon },
+	{ id: 8, name: "Tailwind", icon: tailwindIcon },
+	{ id: 9, name: "Node.js", icon: nodejsIcon },
+	{ id: 10, name: "Python", icon: pythonIcon },
+	{ id: 11, name: "Figma", icon: figmaIcon },
 ];
 
 export default function Skills() {
@@ -39,7 +39,7 @@ export default function Skills() {
 					{/* Duplicate for marquee animation */}
 					{[...skills, ...skills].map((skill, index) => (
 						<li key={`${skill.id}-${index}`}>
-							<Tool name={skill.name} image={skill.image} />
+							<Tool name={skill.name} icon={skill.icon} />
 						</li>
 					))}
 					{/* What happens if the user doesn't like animation? */}

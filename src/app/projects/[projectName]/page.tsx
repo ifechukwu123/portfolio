@@ -6,11 +6,12 @@ import launchIcon from "/public/icons/launch.svg?url";
 import githubIcon from "/public/icons/tools/github.svg?url";
 import IconButton from "@/components/ui/IconButton";
 import Image from "next/image";
+import Tool from "@/components/ui/Tool";
 
 export default function Project() {
 	const router = useRouter();
 
-	//Retrieving the specific project information
+	//Retrieving the specific project details
 	const { projectName } = useParams<{ projectName: string }>();
 	const project = ProjectsData.find((project) => project.slug === projectName);
 
@@ -24,10 +25,10 @@ export default function Project() {
 	if (!project) return null;
 
 	return (
-		<div className="px-sm pt-8 pb-24 md:px-md md:pt-16 md:pb-40 lg:px-lg">
+		<div className="px-sm pt-8 pb-24 md:px-md md:pt-16 md:pb-40 lg:px-lg flex flex-col gap-10 md:gap-14">
 			<div className="flex gap-4 justify-between items-center flex-wrap">
-				<h1 className="flex gap-4">{project.name}</h1>
-				<div>
+				<h1>{project.name}</h1>
+				<div className="flex gap-4">
 					{project.githubLink && (
 						<IconButton
 							icon={githubIcon}
@@ -50,32 +51,42 @@ export default function Project() {
 					)}
 				</div>
 			</div>
-			<section>
+			<section className="mt-[-1.5rem]">
 				<Image
 					src={project.image}
 					alt={`Screenshot of ${project.name} project`}
-					className="w-full"
+					className="w-full border border-licorice rounded-sm"
 				/>
 			</section>
-			<section>
+			<section className="flex flex-col gap-4">
 				<h2>Overview</h2> <p>{project.overview}</p>
 			</section>
-			<section>
+			<section className="flex flex-col gap-4">
 				<h2>Key Features</h2>{" "}
-				<ol>
+				<ol className="list-decimal pl-4 flex flex-col gap-2">
 					{project.features.map((feature) => (
 						<li key={feature.id}>
-							<h3 className="font-bold">{feature.name}:</h3>{" "}
+							<h3 className="inline-block font-bold font-body text-base">
+								{feature.name}:
+							</h3>{" "}
 							<span>{feature.description}</span>
 						</li>
 					))}
 				</ol>
 			</section>
-			<section>
+			<section className="flex flex-col gap-4">
 				<h2>Tech Stack</h2>
+				<ul className="flex flex-wrap gap-4">
+					{project.tools.map((tool) => (
+						<li key={tool.id}>
+							<Tool name={tool.name} icon={tool.icon} />
+						</li>
+					))}
+				</ul>
 			</section>
-			<section>
+			<section className="flex flex-col gap-4">
 				<h2>What I learned</h2>
+				<p>{project.lessons}</p>
 			</section>
 		</div>
 	);

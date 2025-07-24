@@ -2,10 +2,10 @@ import Image, { StaticImageData } from "next/image";
 
 interface ToolProps {
 	name: string;
-	image: StaticImageData;
+	icon: StaticImageData;
 }
 
-export default function Tool({ name, image }: ToolProps) {
+export default function Tool({ name, icon }: ToolProps) {
 	//Add tooltip for the skills
 	return (
 		<span className="bg-alabaster border border-licorice rounded-md flex flex-row-reverse items-center gap-1 md:gap-2 px-2.5 py-1.5 md:px-3 size-max">
@@ -13,7 +13,7 @@ export default function Tool({ name, image }: ToolProps) {
 				{name}
 			</span>
 			<Image
-				src={image}
+				src={icon}
 				alt=""
 				aria-hidden="true"
 				className="w-[0.9375rem] md:w-[1.125rem]"
