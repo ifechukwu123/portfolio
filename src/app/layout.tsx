@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import type { Viewport } from "next";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import ThemeProvider from "context/ThemeProvider";
 import "styles/globals.css";
 import Script from "next/script";
 
@@ -73,11 +74,13 @@ export default function RootLayout({
 				/>
 			</head>
 			<body>
-				<Header />
-				<main className="bg-alabaster dark:bg-licorice min-h-[calc(100vh-4.4375rem)] md:min-h-[calc(100vh-4.6875rem)] lg:min-h-[calc(100vh-5.5rem)]">
-					{children}
-				</main>
-				<Footer />
+				<ThemeProvider>
+					<Header />
+					<main className="bg-alabaster dark:bg-licorice min-h-[calc(100vh-4.4375rem)] md:min-h-[calc(100vh-4.6875rem)] lg:min-h-[calc(100vh-5.5rem)]">
+						{children}
+					</main>
+					<Footer />
+				</ThemeProvider>
 			</body>
 		</html>
 	);

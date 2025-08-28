@@ -11,14 +11,11 @@ import Link from "next/link";
 import IconButton from "components/ui/IconButton";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { useTheme } from "context/ThemeProvider";
 
 export default function Header() {
-	const [isLightMode, setIsLightMode] = useState(true);
+	const { theme, toggleTheme } = useTheme();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-	useEffect(() => {
-		setIsLightMode(!document.documentElement.classList.contains("dark"));
-	}, []);
 
 	useEffect(() => {
 		//Keep track of screen size to display mobile menu
@@ -59,7 +56,7 @@ export default function Header() {
 					{/* mobile logos */}
 
 					<Image
-						src={isLightMode ? MobileLogo : MobileLogoDark}
+						src={theme === "light" ? MobileLogo : MobileLogoDark}
 						alt="Logo for Ife Onuorah"
 						className="md:hidden"
 					/>
@@ -67,7 +64,7 @@ export default function Header() {
 					{/* tablet/desktop logos */}
 					<div className="hidden md:block">
 						<Image
-							src={isLightMode ? Logo : LogoDark}
+							src={theme === "light" ? Logo : LogoDark}
 							alt="Logo for Ife Onuorah"
 							className="w-[9.1875rem] lg:w-[12.0625rem]"
 						/>
@@ -117,14 +114,13 @@ export default function Header() {
 				<div className="flex gap-4 z-10">
 					<IconButton
 						onClick={() => {
-							setIsLightMode(!isLightMode);
+							toggleTheme();
 							document.documentElement.classList.toggle("dark");
-							localStorage.setItem("theme", isLightMode ? "dark" : "light");
 						}}
 						ariaLabel={
-							isLightMode ? "Change to Dark Mode" : "Change to Light Mode"
+							theme === "light" ? "Change to Dark Mode" : "Change to Light Mode"
 						}
-						icon={isLightMode ? SunIcon : MoonIcon}
+						icon={theme === "light" ? SunIcon : MoonIcon}
 						iconSize="regular"
 					/>
 					<IconButton
@@ -139,7 +135,7 @@ export default function Header() {
 
 					{/* mobile menu navigation links */}
 					{isMenuOpen && (
-						<div className=" bg-alabaster dark:bg-licorice fixed left-0 top-0 h-full w-full z-20 px-sm">
+						<div className="bg-alabaster dark:bg-licorice fixed left-0 top-0 h-full w-full z-20 px-sm">
 							<div className="py-3 flex justify-between items-center">
 								{/* Logo */}
 								<Link
@@ -149,7 +145,7 @@ export default function Header() {
 									}}
 								>
 									<Image
-										src={isLightMode ? MobileLogo : MobileLogoDark}
+										src={theme === "light" ? MobileLogo : MobileLogoDark}
 										alt="Logo for Ife Onuorah"
 									/>
 								</Link>

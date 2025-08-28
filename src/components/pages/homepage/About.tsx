@@ -2,11 +2,14 @@
 import { useRouter } from "next/navigation";
 import SmileIcon from "/public/icons/smiling-emoji.svg?url";
 import Image from "next/image";
-import profilePic from "/public/images/profile.jpg";
+import profilePic from "/public/images/profile.png";
+import profilePicDark from "/public/images/profile-dark.png";
 import Button from "@/components/ui/Button";
+import { useTheme } from "context/ThemeProvider";
 
 export default function About() {
 	const router = useRouter();
+	const { theme } = useTheme();
 
 	return (
 		<section className="px-sm md:px-[12%] py-[2rem] md:py-[3rem] lg:py-[4rem] h-[calc(100vh-4.4375rem)] md:h-[calc(100vh-4.6875rem)] lg:h-[calc(100vh-5.5rem)] min-h-[35.625rem] md:min-h-[30rem] flex flex-col-reverse md:flex-row justify-center md:justify-around items-center gap-4 md:gap-10 lg:gap-12">
@@ -37,7 +40,7 @@ export default function About() {
 				</Button>
 			</div>
 			<Image
-				src={profilePic}
+				src={theme === "light" ? profilePic : profilePicDark}
 				alt="A picture of me, Ife!"
 				className="flex-1 object-contain h-12 md:h-auto w-auto md:w-full md:max-h-full"
 			/>
