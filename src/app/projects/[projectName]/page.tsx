@@ -8,6 +8,8 @@ import IconButton from "@/components/ui/IconButton";
 import Image from "next/image";
 import Tool from "@/components/ui/Tool";
 
+export const runtime = "edge";
+
 export default function Project() {
 	const router = useRouter();
 
