@@ -2,8 +2,8 @@
 import { useParams, useRouter } from "next/navigation";
 import { ProjectsData } from "data/projectsData";
 import { useEffect } from "react";
-import launchIcon from "/public/icons/launch.svg?url";
-import githubIcon from "/public/icons/tools/github.svg?url";
+import launchIcon from "../../../../public/icons/launch.svg?url";
+import githubIcon from "../../../../public/icons/tools/github.svg?url";
 import IconButton from "@/components/ui/IconButton";
 import Image from "next/image";
 import Tool from "@/components/ui/Tool";

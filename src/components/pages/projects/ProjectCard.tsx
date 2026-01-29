@@ -1,6 +1,6 @@
 "use client";
 import Image, { StaticImageData } from "next/image";
-import externalLinkIcon from "/public/icons/launch.svg?url";
+import externalLinkIcon from "../../../../public/icons/launch.svg?url";
 import IconButton from "@/components/ui/IconButton";
 import Link from "next/link";
 
