@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
 			(rule: RuleSetRule) =>
 				typeof rule.test === "object" &&
 				rule.test instanceof RegExp &&
-				rule.test.test(".svg")
+				rule.test.test(".svg"),
 		);
 
 		if (!fileLoaderRule) {
@@ -28,7 +28,7 @@ const nextConfig: NextConfig = {
 				issuer: fileLoaderRule.issuer,
 				resourceQuery: { not: [...fileLoaderRule.resourceQuery.not, /url/] }, // exclude if *.svg?url
 				use: ["@svgr/webpack"],
-			}
+			},
 		);
 
 		// Modify the file loader rule to ignore *.svg, since we have it handled now.
@@ -36,6 +36,7 @@ const nextConfig: NextConfig = {
 
 		return config;
 	},
+	turbopack: {},
 };
 
 export default nextConfig;
