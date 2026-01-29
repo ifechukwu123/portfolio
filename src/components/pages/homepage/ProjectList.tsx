@@ -1,11 +1,11 @@
 import Image from "next/image";
-import projectImage from "/public/images/project.png";
-import typescriptIcon from "/public/icons/tools/typescript.svg?url";
-import javascriptIcon from "/public/icons/tools/javascript.svg?url";
-import reactIcon from "/public/icons/tools/react.svg?url";
-import nextjsIcon from "/public/icons/tools/nextjs.svg?url";
-import tailwindIcon from "/public/icons/tools/tailwind.svg?url";
-import nodejsIcon from "/public/icons/tools/nodejs.svg?url";
+import projectImage from "../../../../public/images/project.png";
+import typescriptIcon from "../../../../public/icons/tools/typescript.svg?url";
+import javascriptIcon from "../../../../public/icons/tools/javascript.svg?url";
+import reactIcon from "../../../../public/icons/tools/react.svg?url";
+import nextjsIcon from "../../../../public/icons/tools/nextjs.svg?url";
+import tailwindIcon from "../../../../public/icons/tools/tailwind.svg?url";
+import nodejsIcon from "../../../../public/icons/tools/nodejs.svg?url";
 import Link from "next/link";
 
 export default function ProjectList() {

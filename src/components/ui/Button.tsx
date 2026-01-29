@@ -1,5 +1,5 @@
 import Image from "next/image";
-import RightArrowIcon from "/public/icons/arrow-right.svg?url";
+import RightArrowIcon from "../../../public/icons/arrow-right.svg?url";
 
 interface ButtonPropTypes {
 	classname?: string;

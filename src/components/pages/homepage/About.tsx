@@ -1,9 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
-import SmileIcon from "/public/icons/smiling-emoji.svg?url";
+import SmileIcon from "../../../../public/icons/smiling-emoji.svg?url";
 import Image from "next/image";
-import profilePic from "/public/images/profile.png";
-import profilePicDark from "/public/images/profile-dark.png";
+import profilePic from "../../../../public/images/profile.png";
+import profilePicDark from "../../../../public/images/profile-dark.png";
 import Button from "@/components/ui/Button";
 import { useTheme } from "context/ThemeProvider";
 
