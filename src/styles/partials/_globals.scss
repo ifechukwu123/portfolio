@@ -1,0 +1,84 @@
+@use "./variables" as *;
+@use "./mixins" as *;
+@use "./typography";
+
+* {
+	box-sizing: border-box;
+	font-family: "Nunito Sans", Arial, Verdana, sans-serif;
+	color: $primary-black;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	/* what about text as black bean instead? */
+	font-size: $body-font-size;
+	line-height: $body-line-height;
+	background-color: $apple-green;
+	min-height: 100vh;
+
+	@include tablet {
+		font-size: $tablet-body-font-size;
+		line-height: $tablet-body-line-height;
+	}
+
+	@keyframes marquee {
+		from {
+			transform: translateX(0%);
+		}
+
+		to {
+			transform: translateX(-50%);
+		}
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Baskervville", Garamond, Georgia, serif;
+	font-weight: normal;
+}
+
+h1 {
+	font-size: $h1-font-size;
+	line-height: $h1-line-height;
+
+	@include tablet {
+		font-size: $tablet-h1-font-size;
+		line-height: $tablet-h1-line-height;
+	}
+
+	@include desktop {
+		font-size: $desktop-h1-font-size;
+		line-height: $desktop-h1-line-height;
+	}
+}
+
+h2 {
+	font-size: $h2-font-size;
+	line-height: $h2-line-height;
+
+	@include tablet {
+		font-size: $tablet-h2-font-size;
+		line-height: $tablet-h2-line-height;
+	}
+
+	@include desktop {
+		font-size: $desktop-h2-font-size;
+		line-height: $desktop-h2-line-height;
+	}
+}
+
+h3 {
+	font-size: $h3-font-size;
+	line-height: $h3-line-height;
+
+	@include tablet {
+		font-size: $tablet-h3-font-size;
+		line-height: $tablet-h3-line-height;
+	}
+}
