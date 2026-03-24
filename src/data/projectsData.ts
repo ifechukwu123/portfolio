@@ -1,15 +1,14 @@
-import reactIcon from "../../public/icons/tools/react.svg?url";
-import figmaIcon from "../../public/icons/tools/figma.svg?url";
-import gitIcon from "../../public/icons/tools/git.svg?url";
-import githubIcon from "../../public/icons/tools/github.svg?url";
-import htmlIcon from "../../public/icons/tools/html5.svg?url";
-import javascriptIcon from "../../public/icons/tools/javascript.svg?url";
-import nextjsIcon from "../../public/icons/tools/nextjs.svg?url";
-import nodejsIcon from "../../public/icons/tools/nodejs.svg?url";
-import pythonIcon from "../../public/icons/tools/python.svg?url";
-import tailwindIcon from "../../public/icons/tools/tailwind.svg?url";
-import typescriptIcon from "../../public/icons/tools/typescript.svg?url";
-import { StaticImageData } from "next/image";
+import reactIcon from "../../public/icons/tools/react.svg";
+import figmaIcon from "../../public/icons/tools/figma.svg";
+import gitIcon from "../../public/icons/tools/git.svg";
+import githubIcon from "../../public/icons/tools/github.svg";
+import htmlIcon from "../../public/icons/tools/html5.svg";
+import javascriptIcon from "../../public/icons/tools/javascript.svg";
+import nextjsIcon from "../../public/icons/tools/nextjs.svg";
+import nodejsIcon from "../../public/icons/tools/nodejs.svg";
+import pythonIcon from "../../public/icons/tools/python.svg";
+import tailwindIcon from "../../public/icons/tools/tailwind.svg";
+import typescriptIcon from "../../public/icons/tools/typescript.svg";
 import projectImage from "../../public/images/project.png";
 
 interface Project {
@@ -19,10 +18,10 @@ interface Project {
 	description: string;
 	githubLink?: string;
 	deployedLink?: string;
-	image: StaticImageData;
+	image: string; //need to confirm
 	overview: string;
 	features: Array<{ id: number; name: string; description: string }>;
-	tools: Array<{ id: number; name: string; icon: StaticImageData }>;
+	tools: Array<{ id: number; name: string; icon: string }>;
 	lessons: string;
 }
 
