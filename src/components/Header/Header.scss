@@ -1,0 +1,141 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header {
+	position: relative;
+	padding: 0 $padding;
+	background-color: $primary-white;
+
+	@include tablet {
+		padding: 0 $tablet-padding;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	@include desktop {
+		padding: 0 $desktop-padding;
+		font-size: 1.25rem;
+	}
+
+	&-wrapper {
+		padding: 0.75rem 0;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 2px solid $primary-black;
+	}
+
+	.logo {
+		z-index: 10;
+
+		&-mobile {
+			@include tablet {
+				display: none;
+			}
+		}
+
+		&-tablet {
+			display: none;
+
+			@include tablet {
+				display: block;
+			}
+
+			img {
+				width: 9.1875rem;
+
+				@include desktop {
+					width: 12.0625rem;
+				}
+			}
+
+			.title {
+				display: block;
+				margin-top: -0.25rem;
+				font-size: 0.75rem;
+				text-transform: capitalize;
+				color: rgba($primary-black, 0.6);
+			}
+
+			.italic {
+				font-style: italic;
+				color: $apple-green;
+			}
+		}
+	}
+
+	.nav {
+		display: none;
+		position: absolute;
+		inset: 0;
+
+		@include tablet {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		&__list {
+			display: flex;
+			text-transform: capitalize;
+			gap: 1.25rem;
+
+			@include desktop {
+				gap: 2.25rem;
+			}
+		}
+
+		&__link {
+			padding: 0.75rem 0;
+		}
+	}
+
+	.options {
+		display: flex;
+		z-index: 10;
+		gap: 1rem;
+
+		.hidden {
+			@include tablet {
+				display: none;
+			}
+		}
+
+		.menu {
+			background-color: $primary-white;
+			position: fixed;
+			left: 0;
+			top: 0;
+			height: 100vh;
+			width: 100vw;
+			z-index: 20;
+			padding: 0 $padding;
+
+			&-icons {
+				padding: 0.75rem 0;
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+
+			.nav {
+				padding: 1.5rem 0;
+				height: calc(100vh - 4.4375rem);
+
+				&__list {
+					display: flex;
+					flex-direction: column;
+					gap: 1.75rem;
+					font-size: 1.875rem;
+					font-weight: 300;
+					text-transform: uppercase;
+				}
+
+				&__item {
+					display: block;
+					padding: 1rem 0;
+				}
+			}
+		}
+	}
+}

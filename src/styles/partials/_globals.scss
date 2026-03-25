@@ -2,12 +2,44 @@
 @use "./mixins" as *;
 @use "./typography";
 
-* {
+*,
+::after,
+::before {
 	box-sizing: border-box;
 	font-family: "Nunito Sans", Arial, Verdana, sans-serif;
 	color: $primary-black;
 	margin: 0;
 	padding: 0;
+	border: 0 solid;
+}
+
+ol,
+ul {
+	list-style: none;
+}
+
+img,
+svg,
+video,
+iframe,
+object {
+	display: block;
+}
+
+img,
+video {
+	max-width: 100%;
+	height: auto;
+}
+
+button {
+	background-color: transparent;
+	cursor: pointer;
+}
+
+a {
+	color: inherit;
+	text-decoration: inherit;
 }
 
 body {
