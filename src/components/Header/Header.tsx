@@ -1,15 +1,19 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/logo/mobile.svg";
+import LogoDark from "../../assets/logo/mobile-dark.svg";
 import TabletLogo from "../../assets/logo/tablet.svg";
+import TabletLogoDark from "../../assets/logo/tablet-dark.svg";
 import IconButton from "../IconButton/IconButton";
 import SunIcon from "../../assets/icons/sun.svg";
+import MoonIcon from "../../assets/icons/moon.svg";
 import MenuIcon from "../../assets/icons/menu.svg";
 import XIcon from "../../assets/icons/x.svg";
 import "./Header.scss";
+import { useTheme } from "../../context/theme/ThemeProvider";
 
 export default function Header() {
-	// const { theme, toggleTheme } = useTheme(); add theme
+	const { theme, toggleTheme } = useTheme();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
 	useEffect(() => {
@@ -35,11 +39,18 @@ export default function Header() {
 				{/* Logo */}
 				<Link to="/" className="logo">
 					{/* mobile logo */}
-					<img src={Logo} alt="Logo for Ife Onuorah" className="logo-mobile" />
+					<img
+						src={theme === "light" ? Logo : LogoDark}
+						alt="Logo for Ife Onuorah"
+						className="logo-mobile"
+					/>
 
 					{/* tablet/desktop logo */}
 					<div className="logo-tablet">
-						<img src={TabletLogo} alt="Logo for Ife Onuorah" />
+						<img
+							src={theme === "light" ? TabletLogo : TabletLogoDark}
+							alt="Logo for Ife Onuorah"
+						/>
 
 						<span className="title">
 							software developer <span className="italic">+ dreamer</span>
@@ -82,11 +93,14 @@ export default function Header() {
 				<div className="options">
 					<IconButton
 						onClick={() => {
-							// toggleTheme();
+							console.log(theme);
+							toggleTheme();
 							document.documentElement.classList.toggle("dark");
 						}}
-						ariaLabel={"Change to Dark Mode"}
-						icon={SunIcon}
+						ariaLabel={
+							theme === "light" ? "Change to Dark Mode" : "Change to Light Mode"
+						}
+						icon={theme === "light" ? SunIcon : MoonIcon}
 						iconSize="regular"
 					/>
 					<IconButton
@@ -110,7 +124,10 @@ export default function Header() {
 										setIsMenuOpen(false);
 									}}
 								>
-									<img src={Logo} alt="Logo for Ife Onuorah" />
+									<img
+										src={theme === "light" ? Logo : LogoDark}
+										alt="Logo for Ife Onuorah"
+									/>
 								</Link>
 								<IconButton
 									onClick={() => {
