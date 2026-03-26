@@ -138,12 +138,12 @@ export default function Header() {
 									iconSize="regular"
 								/>
 							</div>
-							<nav aria-label="Main" className="nav">
-								<ul role="list" className="nav__list">
+							<nav aria-label="Main" className="menuNav">
+								<ul role="list" className="menuNav__list">
 									<li>
 										<Link
 											to="/projects"
-											className="nav__item"
+											className="menuNav__item"
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
@@ -154,7 +154,7 @@ export default function Header() {
 									<li>
 										<Link
 											to="/about"
-											className="nav__item"
+											className="menuNav__item"
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
@@ -165,7 +165,7 @@ export default function Header() {
 									<li>
 										<Link
 											to="/contact"
-											className="nav__item"
+											className="menuNav__item"
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
@@ -178,7 +178,7 @@ export default function Header() {
 											href="/Ife_Onuorah_Resume.pdf"
 											target="_blank"
 											type="application/pdf"
-											className="nav__item"
+											className="menuNav__item"
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
