@@ -1,3 +1,5 @@
+@use "../../styles/partials/mixins" as *;
+
 .button {
 	padding: 0.625rem;
 }
@@ -10,4 +12,11 @@
 .regular {
 	width: 1.5625rem;
 	height: 1.5625rem;
+}
+
+.small,
+.regular {
+	@include dark {
+		filter: invert(1);
+	}
 }

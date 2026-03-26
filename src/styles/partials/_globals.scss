@@ -7,9 +7,15 @@
 ::before {
 	box-sizing: border-box;
 	font-family: "Nunito Sans", Arial, Verdana, sans-serif;
+	color: $primary-black;
 	margin: 0;
 	padding: 0;
 	border: 0 solid;
+	transition: color 0.3s ease;
+
+	@include dark {
+		color: $primary-white;
+	}
 }
 
 ol,
