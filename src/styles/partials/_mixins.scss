@@ -11,3 +11,10 @@
 		@content;
 	}
 }
+
+// Dark mode
+@mixin dark {
+	html.dark & {
+		@content;
+	}
+}

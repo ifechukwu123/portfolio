@@ -1,2 +1,25 @@
 @use "./styles/partials/globals";
 @use "./styles/partials/variables" as *;
+@use "./styles/partials/mixins" as *;
+
+.main {
+	min-height: calc(100vh - 4.4375rem);
+	background-color: $primary-white;
+	color: $primary-black;
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+
+	@include dark {
+		background-color: $primary-black;
+		color: $primary-white;
+	}
+
+	@include tablet {
+		min-height: calc(100vh - 4.6875rem);
+	}
+
+	@include desktop {
+		min-height: calc(100vh - 5.5rem);
+	}
+}

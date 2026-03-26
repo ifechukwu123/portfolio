@@ -16,6 +16,8 @@ export default function Header() {
 	const { theme, toggleTheme } = useTheme();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+	console.log(theme);
+
 	useEffect(() => {
 		//Event to keep track of screen size to display mobile menu
 		function checkScreenSize() {
@@ -93,9 +95,7 @@ export default function Header() {
 				<div className="options">
 					<IconButton
 						onClick={() => {
-							console.log(theme);
 							toggleTheme();
-							document.documentElement.classList.toggle("dark");
 						}}
 						ariaLabel={
 							theme === "light" ? "Change to Dark Mode" : "Change to Light Mode"

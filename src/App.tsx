@@ -15,15 +15,17 @@ function App() {
 		<BrowserRouter>
 			<ThemeProvider>
 				<Header />
-				<Routes>
-					<Route path="/" element={<Home />} />
-					<Route path="home" element={<Navigate to="/" />} />
-					<Route path="about" element={<About />} />
-					<Route path="contact" element={<Contact />} />
-					<Route path="projects" element={<Projects />} />
-					<Route path="projects/:id" element={<Project />} />
-					<Route path="*" element={<NotFound />} />
-				</Routes>
+				<main className="main">
+					<Routes>
+						<Route path="/" element={<Home />} />
+						<Route path="home" element={<Navigate to="/" />} />
+						<Route path="about" element={<About />} />
+						<Route path="contact" element={<Contact />} />
+						<Route path="projects" element={<Projects />} />
+						<Route path="projects/:id" element={<Project />} />
+						<Route path="*" element={<NotFound />} />
+					</Routes>
+				</main>
 				<Footer />
 			</ThemeProvider>
 		</BrowserRouter>
