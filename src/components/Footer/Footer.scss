@@ -3,7 +3,6 @@
 
 .footer {
 	background-color: $black-bean;
-	color: $primary-white;
 	padding: 1.5rem $padding;
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -71,6 +70,7 @@
 			&__link {
 				display: block;
 				padding: 0.25rem 0;
+				color: $primary-white !important;
 			}
 		}
 
@@ -134,5 +134,9 @@
 				}
 			}
 		}
+	}
+
+	span {
+		color: $primary-white !important;
 	}
 }
