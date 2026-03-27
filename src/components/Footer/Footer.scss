@@ -1,0 +1,14 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.footer {
+	background-color: $black-bean;
+	color: $primary-white;
+	padding: 1.5rem $padding;
+	font-size: 0.875rem;
+
+	@include tablet {
+		padding: 1.5rem $tablet-padding;
+		font-size: 1rem;
+	}
+}
