@@ -13,41 +13,34 @@ export default function Footer() {
 	return (
 		<footer className="footer">
 			{/* footer wrapper */}
-			<div className="flex flex-col gap-6">
+			<div className="footer-wrapper">
 				{/* Links */}
-				<div className="md:flex md:justify-between md:items-center">
-					<Link to="/" className="hidden md:block">
-						<img
-							src={TabletLogo}
-							alt="Logo for Ife Onuorah"
-							className="w-[22.5rem]"
-						/>
+				<div className="footer__links">
+					<Link to="/" className="logo">
+						<img src={TabletLogo} alt="Logo for Ife Onuorah" />
 					</Link>
 
-					<div className="flex justify-between items-center md:gap-4">
+					<div className="links-wrapper">
 						{/* navigation */}
-						<nav aria-label="Secondary">
-							<ul
-								role="list"
-								className="capitalize flex flex-col gap-2 md:px-4 md:border-r md:border-alabaster md:text-center"
-							>
-								<li className="hover:underline">
-									<Link to="/" className="block py-1">
+						<nav aria-label="Secondary" className="nav">
+							<ul role="list" className="nav__list">
+								<li className="nav__item">
+									<Link to="/" className="nav__link">
 										home
 									</Link>
 								</li>
-								<li className="hover:underline">
-									<Link to="/projects" className="block py-1">
+								<li className="nav__item">
+									<Link to="/projects" className="nav__link">
 										projects
 									</Link>
 								</li>
-								<li className="hover:underline">
-									<Link to="/about" className="block py-1">
+								<li className="nav__item">
+									<Link to="/about" className="nav__link">
 										about
 									</Link>
 								</li>
-								<li className="hover:underline">
-									<Link to="contact" className="block py-1">
+								<li className="nav__item">
+									<Link to="contact" className="nav__link">
 										contact
 									</Link>
 								</li>
@@ -55,12 +48,12 @@ export default function Footer() {
 						</nav>
 
 						{/* socials */}
-						<div className="flex flex-col items-center gap-2">
-							<span className="flex gap-2">
+						<div className="socials">
+							<span className="socials__message">
 								<span>Send me a message</span>{" "}
 								<img src={SmileIcon} alt="Smiling face emoji" />
 							</span>
-							<ul role="list" className="flex gap-2">
+							<ul role="list" className="socials__list">
 								<li>
 									<a href="mailto:ifeonuorah@gmail.com">
 										<img src={emailIcon} alt="Send an email" />
@@ -101,20 +94,14 @@ export default function Footer() {
 				</div>
 
 				{/* metadata */}
-				<div className="flex flex-col gap-1">
-					<Link to="/" className="md:hidden">
-						<img
-							src={TabletLogo}
-							alt="Logo for Ife Onuorah"
-							className="w-full"
-						/>
+				<div className="metadata">
+					<Link to="/" className="metadata__logo">
+						<img src={TabletLogo} alt="Logo for Ife Onuorah" />
 					</Link>
-					<div className="pt-4 border-t border-alabaster border-dashed flex justify-between text-[0.625rem] leading-[0.9375rem] md:text-[0.8125rem] md:leading-[1.2188rem]">
-						<span className="flex gap-1 items-center">
+					<div className="author">
+						<span className="spanOne">
 							Made with{" "}
-							<span className="hidden md:block">
-								lots and lots and lots...of
-							</span>{" "}
+							<span className="spanTablet">lots and lots and lots...of</span>{" "}
 							<img src={HeartIcon} alt="love" /> by <span>Ife Onuorah</span>
 						</span>
 						<span>© 2025, Ife Onuorah</span>

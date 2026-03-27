@@ -6,9 +6,133 @@
 	color: $primary-white;
 	padding: 1.5rem $padding;
 	font-size: 0.875rem;
+	line-height: 1.25rem;
 
 	@include tablet {
 		padding: 1.5rem $tablet-padding;
 		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+	&-wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+	}
+
+	&__links {
+		@include tablet {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		.logo {
+			display: none;
+
+			@include tablet {
+				display: block;
+			}
+
+			img {
+				width: 22.5rem;
+			}
+		}
+
+		.links-wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@include tablet {
+				gap: 1rem;
+			}
+		}
+
+		.nav {
+			&__list {
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+				text-transform: capitalize;
+
+				@include tablet {
+					padding: 0 1rem;
+					border-right: 1px solid $primary-white;
+					text-align: center;
+				}
+			}
+
+			&__item {
+				&:hover {
+					text-decoration: underline;
+				}
+			}
+
+			&__link {
+				display: block;
+				padding: 0.25rem 0;
+			}
+		}
+
+		.socials {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 0.5rem;
+
+			&__message {
+				display: flex;
+				gap: 0.5rem;
+			}
+
+			&__list {
+				display: flex;
+				gap: 0.5rem;
+			}
+		}
+	}
+
+	.metadata {
+		display: flex;
+		flex-direction: column;
+		gap: 0.25rem;
+
+		&__logo {
+			@include tablet {
+				display: none;
+			}
+
+			img {
+				width: 100%;
+			}
+		}
+
+		.author {
+			padding-top: 1rem;
+			border-top: 1px dashed $primary-white;
+			display: flex;
+			justify-content: space-between;
+			font-size: 0.625rem;
+			line-height: 0.9375rem;
+
+			@include tablet {
+				font-size: 0.8125rem;
+				line-height: 1.2188rem;
+			}
+
+			.spanOne {
+				display: flex;
+				gap: 0.25rem;
+				align-items: center;
+			}
+
+			.spanTablet {
+				display: none;
+
+				@include tablet {
+					display: block;
+				}
+			}
+		}
 	}
 }

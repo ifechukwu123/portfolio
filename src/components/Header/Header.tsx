@@ -16,8 +16,6 @@ export default function Header() {
 	const { theme, toggleTheme } = useTheme();
 	const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-	console.log(theme);
-
 	useEffect(() => {
 		//Event to keep track of screen size to display mobile menu
 		function checkScreenSize() {
