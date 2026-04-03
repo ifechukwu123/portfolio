@@ -1,4 +1,4 @@
-import "./NotFound.scss";
+import styles from "./NotFound.module.scss";
 
 export default function NotFound() {
 	return <>Page not found</>;

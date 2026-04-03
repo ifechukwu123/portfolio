@@ -1,0 +1,51 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+.home {
+	display: flex;
+	flex-direction: column;
+	gap: 4.5rem;
+
+	@include tablet {
+		gap: 6rem;
+	}
+
+	@include desktop {
+		gap: 8rem;
+	}
+}
+
+.about {
+	padding: 0 $padding;
+	height: calc(100vh - 4.4375rem);
+	min-height: 35.625rem;
+	display: flex;
+	flex-direction: column-reverse;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+
+	@include tablet {
+		padding: 2rem 12%;
+		height: calc(100vh - 4.6875rem);
+		min-height: 30rem;
+		flex-direction: row;
+		justify-content: space-around;
+		gap: 2.5rem;
+	}
+
+	@include desktop {
+		padding: 4rem 12%;
+		height: calc(100vh - 5.5rem);
+		gap: 3rem;
+	}
+}
+
+.skills {
+}
+
+.projects {
+}
+
+.contact {
+}

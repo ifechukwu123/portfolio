@@ -9,7 +9,7 @@ import SunIcon from "../../assets/icons/sun.svg";
 import MoonIcon from "../../assets/icons/moon.svg";
 import MenuIcon from "../../assets/icons/menu.svg";
 import XIcon from "../../assets/icons/x.svg";
-import "./Header.scss";
+import styles from "./Header.module.scss";
 import { useTheme } from "../../context/theme/ThemeProvider";
 
 export default function Header() {
@@ -34,45 +34,46 @@ export default function Header() {
 	}, []);
 
 	return (
-		<header className="header">
-			<div className="header-wrapper">
+		<header className={styles.header}>
+			<div className={styles["header-wrapper"]}>
 				{/* Logo */}
-				<Link to="/" className="logo">
+				<Link to="/" className={styles.logo}>
 					{/* mobile logo */}
 					<img
 						src={theme === "light" ? Logo : LogoDark}
 						alt="Logo for Ife Onuorah"
-						className="logo-mobile"
+						className={styles["logo-mobile"]}
 					/>
 
 					{/* tablet/desktop logo */}
-					<div className="logo-tablet">
+					<div className={styles["logo-tablet"]}>
 						<img
 							src={theme === "light" ? TabletLogo : TabletLogoDark}
 							alt="Logo for Ife Onuorah"
 						/>
 
-						<span className="title">
-							software developer <span className="italic">+ dreamer</span>
+						<span className={styles.title}>
+							software developer{" "}
+							<span className={styles.italic}>+ dreamer</span>
 						</span>
 					</div>
 				</Link>
 
 				{/* tablet/desktop navigation links */}
-				<nav aria-label="Main" className="nav">
-					<ul role="list" className="nav__list">
+				<nav aria-label="Main" className={styles.nav}>
+					<ul role="list" className={styles.nav__list}>
 						<li>
-							<Link to="/projects" className="nav__link">
+							<Link to="/projects" className={styles.nav__link}>
 								projects
 							</Link>
 						</li>
 						<li>
-							<Link to="/about" className="nav__link">
+							<Link to="/about" className={styles.nav__link}>
 								about
 							</Link>
 						</li>
 						<li>
-							<Link to="/contact" className="nav__link">
+							<Link to="/contact" className={styles.nav__link}>
 								contact
 							</Link>
 						</li>
@@ -81,7 +82,7 @@ export default function Header() {
 								href="/Ife_Onuorah_Resume.pdf"
 								target="_blank"
 								type="application/pdf"
-								className="nav__link"
+								className={styles.nav__link}
 							>
 								resume
 							</a>
@@ -90,7 +91,7 @@ export default function Header() {
 				</nav>
 
 				{/* theme & mobile menu options */}
-				<div className="options">
+				<div className={styles.options}>
 					<IconButton
 						onClick={() => {
 							toggleTheme();
@@ -102,7 +103,7 @@ export default function Header() {
 						iconSize="regular"
 					/>
 					<IconButton
-						classname="hidden"
+						classname={styles.hidden}
 						ariaLabel={"Display menu options"}
 						onClick={() => {
 							setIsMenuOpen(true);
@@ -113,8 +114,8 @@ export default function Header() {
 
 					{/* mobile menu navigation links */}
 					{isMenuOpen && (
-						<div className="menu">
-							<div className="menu-icons">
+						<div className={styles.menu}>
+							<div className={styles["menu-icons"]}>
 								{/* Logo */}
 								<Link
 									to="/"
@@ -136,12 +137,12 @@ export default function Header() {
 									iconSize="regular"
 								/>
 							</div>
-							<nav aria-label="Main" className="menuNav">
-								<ul role="list" className="menuNav__list">
+							<nav aria-label="Main" className={styles.menuNav}>
+								<ul role="list" className={styles.menuNav__list}>
 									<li>
 										<Link
 											to="/projects"
-											className="menuNav__item"
+											className={styles.menuNav__item}
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
@@ -152,7 +153,7 @@ export default function Header() {
 									<li>
 										<Link
 											to="/about"
-											className="menuNav__item"
+											className={styles.menuNav__item}
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
@@ -163,7 +164,7 @@ export default function Header() {
 									<li>
 										<Link
 											to="/contact"
-											className="menuNav__item"
+											className={styles.menuNav__item}
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}
@@ -176,7 +177,7 @@ export default function Header() {
 											href="/Ife_Onuorah_Resume.pdf"
 											target="_blank"
 											type="application/pdf"
-											className="menuNav__item"
+											className={styles.menuNav__item}
 											onClick={() => {
 												setIsMenuOpen(false);
 											}}

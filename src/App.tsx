@@ -1,6 +1,5 @@
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Home from "./pages/Home/Home";
-import "./App.scss";
 import NotFound from "./pages/NotFound/NotFound";
 import About from "./pages/About/About";
 import Contact from "./pages/Contact/Contact";
@@ -9,13 +8,14 @@ import Project from "./components/Project/Project";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import ThemeProvider from "./context/theme/ThemeProvider";
+import styles from "./App.module.scss";
 
 function App() {
 	return (
 		<BrowserRouter>
 			<ThemeProvider>
 				<Header />
-				<main className="main">
+				<main className={styles.main}>
 					<Routes>
 						<Route path="/" element={<Home />} />
 						<Route path="home" element={<Navigate to="/" />} />

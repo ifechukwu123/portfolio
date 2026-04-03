@@ -7,40 +7,40 @@ import websiteIcon from "../../assets/icons/socials/link.svg";
 import linkedinIcon from "../../assets/icons/socials/linkedin.svg";
 import githubIcon from "../../assets/icons/socials/github.svg";
 import instaIcon from "../../assets/icons/socials/instagram.svg";
-import "./Footer.scss";
+import styles from "./Footer.module.scss";
 
 export default function Footer() {
 	return (
-		<footer className="footer">
+		<footer className={styles.footer}>
 			{/* footer wrapper */}
-			<div className="footer-wrapper">
+			<div className={styles["footer-wrapper"]}>
 				{/* Links */}
-				<div className="footer__links">
-					<Link to="/" className="logo">
+				<div className={styles.footer__links}>
+					<Link to="/" className={styles.logo}>
 						<img src={TabletLogo} alt="Logo for Ife Onuorah" />
 					</Link>
 
-					<div className="links-wrapper">
+					<div className={styles["links-wrapper"]}>
 						{/* navigation */}
-						<nav aria-label="Secondary" className="nav">
-							<ul role="list" className="nav__list">
-								<li className="nav__item">
-									<Link to="/" className="nav__link">
+						<nav aria-label="Secondary" className={styles.nav}>
+							<ul role="list" className={styles.nav__list}>
+								<li className={styles.nav__item}>
+									<Link to="/" className={styles.nav__link}>
 										home
 									</Link>
 								</li>
-								<li className="nav__item">
-									<Link to="/projects" className="nav__link">
+								<li className={styles.nav__item}>
+									<Link to="/projects" className={styles.nav__link}>
 										projects
 									</Link>
 								</li>
-								<li className="nav__item">
-									<Link to="/about" className="nav__link">
+								<li className={styles.nav__item}>
+									<Link to="/about" className={styles.nav__link}>
 										about
 									</Link>
 								</li>
-								<li className="nav__item">
-									<Link to="contact" className="nav__link">
+								<li className={styles.nav__item}>
+									<Link to="contact" className={styles.nav__link}>
 										contact
 									</Link>
 								</li>
@@ -48,12 +48,12 @@ export default function Footer() {
 						</nav>
 
 						{/* socials */}
-						<div className="socials">
-							<span className="socials__message">
+						<div className={styles.socials}>
+							<span className={styles.socials__message}>
 								<span>Send me a message</span>{" "}
 								<img src={SmileIcon} alt="Smiling face emoji" />
 							</span>
-							<ul role="list" className="socials__list">
+							<ul role="list" className={styles.socials__list}>
 								<li>
 									<a href="mailto:ifeonuorah@gmail.com">
 										<img src={emailIcon} alt="Send an email" />
@@ -94,14 +94,16 @@ export default function Footer() {
 				</div>
 
 				{/* metadata */}
-				<div className="metadata">
-					<Link to="/" className="metadata__logo">
+				<div className={styles.metadata}>
+					<Link to="/" className={styles.metadata__logo}>
 						<img src={TabletLogo} alt="Logo for Ife Onuorah" />
 					</Link>
-					<div className="author">
-						<span className="spanOne">
+					<div className={styles.author}>
+						<span className={styles.spanOne}>
 							Made with{" "}
-							<span className="spanTablet">lots and lots and lots...of</span>{" "}
+							<span className={styles.spanTablet}>
+								lots and lots and lots...of
+							</span>{" "}
 							<img src={HeartIcon} alt="love" /> by <span>Ife Onuorah</span>
 						</span>
 						<span>© 2025, Ife Onuorah</span>

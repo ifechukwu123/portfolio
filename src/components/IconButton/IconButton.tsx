@@ -1,4 +1,4 @@
-import "./IconButton.scss";
+import styles from "./IconButton.module.scss";
 
 interface IconButtonPropTypes {
 	classname?: string;
@@ -17,7 +17,7 @@ export default function IconButton({
 }: IconButtonPropTypes) {
 	return (
 		<button
-			className={`button ${classname || ""}`}
+			className={`${styles.button} ${classname || ""}`}
 			onClick={onClick}
 			aria-label={ariaLabel}
 		>
@@ -25,7 +25,7 @@ export default function IconButton({
 				src={icon}
 				alt=""
 				aria-hidden="true"
-				className={`${iconSize == "small" ? "small" : "regular"}`}
+				className={`${iconSize == "small" ? styles.small : styles.regular}`}
 			/>
 		</button>
 	);

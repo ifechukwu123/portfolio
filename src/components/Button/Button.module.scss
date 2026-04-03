@@ -1,0 +1,26 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.button {
+	padding: 0.5rem 0.75rem;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
+	background-color: $apple-green;
+	border: 1px solid $primary-black;
+	border-radius: $borderRadius;
+	text-transform: uppercase;
+	font-size: 1rem;
+
+	@include tablet {
+		font-size: 1.125rem;
+	}
+
+	@include desktop {
+		font-size: 1.125rem;
+	}
+
+	@include dark {
+		color: $primary-black;
+	}
+}
