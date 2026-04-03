@@ -23,4 +23,10 @@
 	@include dark {
 		color: $primary-black;
 	}
+
+	img {
+		@include tablet {
+			width: 1.125rem;
+		}
+	}
 }

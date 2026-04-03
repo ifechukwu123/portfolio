@@ -15,12 +15,7 @@ export default function Button({
 	return (
 		<button className={`${styles.button} ${classname}`} onClick={onClick}>
 			{children}
-			<img
-				src={RightArrowIcon}
-				alt=""
-				aria-hidden="true"
-				className="md:w-[1.125rem]"
-			/>
+			<img src={RightArrowIcon} alt="" aria-hidden="true" />
 		</button>
 	);
 }
