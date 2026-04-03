@@ -1,4 +1,4 @@
-import styles from "./Tool.module.scss";
+// import styles from "./Tool.module.scss";
 
 export default function Tool() {
 	return <>Tools</>;
