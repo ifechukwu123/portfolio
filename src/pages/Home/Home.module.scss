@@ -352,6 +352,10 @@
 		@include tablet {
 			padding: 1rem 0;
 		}
+
+		@include dark {
+			color: $primary-black;
+		}
 	}
 
 	&__tools {
