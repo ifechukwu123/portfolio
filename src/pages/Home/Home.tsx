@@ -153,7 +153,24 @@ export default function Home() {
 				</Button>
 				<div className={styles.divider}></div>
 			</section>
-			<section className={styles.contact}></section>
+			<section className={styles.contact}>
+				<h2 className={styles.contact__heading}>
+					Looking for a developer who notices the small things?{" "}
+					<span>That&apos;s me!!</span>
+				</h2>
+				<p className={styles.contact__message}>
+					I have a sharp eye for detail and design, a solid full-stack
+					foundation, and a love for learning. I&apos;m excited to collaborate
+					and bring ideas to life—and I&apos;m looking for new opportunities to
+					do just that.
+				</p>
+				<Button
+					onClick={() => navigate("/contact")}
+					classname={styles.contact__button}
+				>
+					let&apos;s connect
+				</Button>
+			</section>
 		</div>
 	);
 }
