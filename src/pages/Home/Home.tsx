@@ -13,7 +13,8 @@ import nodejsIcon from "../../assets/icons/tools/nodejs.svg";
 import pythonIcon from "../../assets/icons/tools/python.svg";
 import tailwindIcon from "../../assets/icons/tools/tailwind.svg";
 import typescriptIcon from "../../assets/icons/tools/typescript.svg";
-import { useNavigate } from "react-router-dom";
+import projectImage from "../../assets/images/project.png";
+import { Link, useNavigate } from "react-router-dom";
 import { useTheme } from "../../context/theme/ThemeProvider";
 import styles from "./Home.module.scss";
 import Tool from "../../components/Tool/Tool";
@@ -81,7 +82,77 @@ export default function Home() {
 					</ul>
 				</div>
 			</section>
-			<section className={styles.projects}></section>
+			<section className={styles.projects}>
+				<header className={styles.projects__header}>
+					<h2 className={styles.projects__title}>browse my projects</h2>
+					<Button
+						onClick={() => navigate("/projects")}
+						classname={`${styles.button} ${styles["button--tablet"]}`}
+					>
+						view all projects
+					</Button>
+				</header>
+				<ul role="list" className={styles.projects__list}>
+					<li className={styles.projects__item}>
+						<Link
+							to="/projects/system_of_silk"
+							className={styles.projects__link}
+						>
+							<h3 className={styles.projects__name}>System of Silk</h3>
+							<img
+								src={projectImage}
+								alt="Snapshot of the System of Silk project"
+								className={styles.projects__image}
+							/>
+						</Link>
+						<div className={styles.projects__tools}>
+							{/* Add tooltip */}
+							<img src={typescriptIcon} alt="Typescript" />
+							<img src={nextjsIcon} alt="Nextjs" />
+							<img src={tailwindIcon} alt="Tailwind" />
+							<img src={nodejsIcon} alt="Nodejs" />
+						</div>
+					</li>
+					<li className={styles.projects__item}>
+						<Link to="/projects/beauty_bin" className={styles.projects__link}>
+							<h3 className={styles.projects__name}>Beauty Bin</h3>
+							<img
+								src={projectImage}
+								alt="Snapshot of the System of Silk project"
+								className={styles.projects__image}
+							/>
+						</Link>
+
+						<div className={styles.projects__tools}>
+							<img src={javascriptIcon} alt="Javascript" />
+							<img src={reactIcon} alt="React" />
+							<img src={nodejsIcon} alt="Nodejs" />
+						</div>
+					</li>
+					<li className={styles.projects__item}>
+						<Link to="/projects/instock" className={styles.projects__link}>
+							<h3 className={styles.projects__name}>Instock</h3>
+							<img
+								src={projectImage}
+								alt="Snapshot of the System of Silk project"
+								className={styles.projects__image}
+							/>
+						</Link>
+						<div className={styles.projects__tools}>
+							<img src={javascriptIcon} alt="Javascript" />
+							<img src={reactIcon} alt="React" />
+							<img src={nodejsIcon} alt="Nodejs" />
+						</div>
+					</li>
+				</ul>
+				<Button
+					onClick={() => navigate("/projects")}
+					classname={`${styles.button} ${styles["button--mobile"]}`}
+				>
+					view all projects
+				</Button>
+				<div className={styles.divider}></div>
+			</section>
 			<section className={styles.contact}></section>
 		</div>
 	);
