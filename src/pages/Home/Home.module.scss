@@ -16,7 +16,7 @@
 }
 
 .about {
-	padding: 0 $padding;
+	padding: 2rem $padding;
 	height: calc(100vh - 4.4375rem);
 	min-height: 35.625rem;
 	display: flex;
@@ -26,7 +26,7 @@
 	gap: 1rem;
 
 	@include tablet {
-		padding: 2rem 12%;
+		padding: 3rem 12%;
 		height: calc(100vh - 4.6875rem);
 		min-height: 30rem;
 		flex-direction: row;
@@ -38,6 +38,121 @@
 		padding: 4rem 12%;
 		height: calc(100vh - 5.5rem);
 		gap: 3rem;
+	}
+
+	&__content {
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+		gap: 1.5rem;
+
+		@include tablet {
+			gap: 2.25rem;
+			flex: 1;
+			max-width: 31.5625rem;
+		}
+	}
+
+	&__message {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		@include tablet {
+			align-items: flex-start;
+			gap: 1rem;
+		}
+	}
+
+	&__title {
+		text-transform: capitalize;
+		display: flex;
+		align-items: baseline;
+		gap: 0.25rem;
+		font-weight: 500;
+		font-size: 3.5rem;
+		line-height: 5.25rem;
+
+		@include tablet {
+			gap: 0.5rem;
+			font-size: 4.5rem;
+			line-height: 6.75rem;
+		}
+
+		@include desktop {
+			font-size: 6rem;
+			line-height: 9rem;
+		}
+
+		span {
+			font-family: inherit;
+		}
+
+		img {
+			width: 1.5625rem;
+
+			@include tablet {
+				width: 1.9375rem;
+			}
+
+			@include desktop {
+				width: 2.875rem;
+			}
+
+			@include dark {
+				filter: invert(1);
+			}
+		}
+	}
+
+	&__description {
+		padding: 0 0.5rem;
+		max-width: 22.25rem;
+		text-align: center;
+		font-size: 1.125rem;
+		line-height: 1.75rem;
+
+		@include tablet {
+			padding: 0;
+			max-width: 31.5625rem;
+			font-size: 1.25rem;
+			line-height: 2.5rem;
+			text-align: left;
+			margin-top: -1rem;
+		}
+
+		@include desktop {
+			font-size: 1.5rem;
+			line-height: 3rem;
+		}
+
+		.italic {
+			display: inline-block;
+			font-style: italic;
+			text-transform: capitalize;
+			color: $rose-red;
+		}
+	}
+
+	&__button {
+		align-self: center;
+
+		@include tablet {
+			align-self: flex-start;
+		}
+	}
+
+	&__image {
+		flex: 1;
+		object-fit: contain;
+		height: 3rem;
+		width: auto;
+
+		@include tablet {
+			height: auto;
+			width: 100%;
+			max-height: 100%;
+		}
 	}
 }
 

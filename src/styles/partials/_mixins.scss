@@ -14,7 +14,7 @@
 
 // Dark mode
 @mixin dark {
-	html.dark & {
+	:global(html.dark) & {
 		@content;
 	}
 }
