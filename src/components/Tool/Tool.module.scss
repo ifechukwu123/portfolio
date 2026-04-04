@@ -1,2 +1,43 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.tool {
+	background-color: $primary-white;
+	border: 1px solid $primary-black;
+	border-radius: $tablet-borderRadius;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: center;
+	gap: 0.25rem;
+	padding: 0.375rem 0.625rem;
+	width: max-content;
+	height: max-content;
+
+	@include tablet {
+		gap: 0.5rem;
+		padding: 0.375rem 0.75rem;
+	}
+
+	.title {
+		font-weight: 600;
+		font-size: 0.875rem;
+		line-height: 1.25rem;
+
+		@include tablet {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+
+		@include dark {
+			color: $primary-black;
+		}
+	}
+
+	img {
+		width: 0.9375rem;
+
+		@include tablet {
+			width: 1.125rem;
+		}
+	}
+}

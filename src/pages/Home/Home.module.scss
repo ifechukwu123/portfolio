@@ -157,6 +157,86 @@
 }
 
 .skills {
+	margin-top: -2rem;
+
+	@include tablet {
+		margin-top: 0rem;
+		display: flex;
+	}
+
+	&__heading {
+		font-weight: 500;
+		text-transform: uppercase;
+		font-size: 1.25rem;
+		line-height: 1.75rem;
+		margin-bottom: 0.5rem;
+		padding: 0 $padding;
+
+		@include tablet {
+			margin-bottom: 0;
+			padding: $padding $padding $padding 3rem;
+			background-color: $black-bean;
+			color: $primary-white;
+			font-size: 1.5rem;
+			line-height: 2.25rem;
+			border-right: 2px solid $primary-white;
+			width: 14.375rem;
+			flex-shrink: 0;
+		}
+
+		@include desktop {
+			padding: 2.5rem 1.5rem 2.5rem $desktop-padding;
+			width: max-content;
+		}
+	}
+
+	&__list {
+		//"  group-hover:motion-safe:[animation-play-state:paused]"
+		display: flex;
+		gap: 1rem;
+		width: max-content;
+
+		@include tablet {
+			padding-left: $padding;
+		}
+
+		@include desktop {
+			padding-left: 1.5rem;
+		}
+
+		@include motion-safe {
+			animation: marquee 30s linear infinite;
+		}
+
+		@keyframes marquee {
+			from {
+				transform: translateX(0%);
+			}
+			to {
+				transform: translateX(-50%);
+			}
+		}
+	}
+
+	&-container {
+		padding: 1.5rem 0;
+		background-color: $black-bean;
+		overflow: hidden;
+
+		&:hover {
+			.skills__list {
+				@include motion-safe {
+					animation-play-state: paused;
+				}
+			}
+		}
+
+		@include tablet {
+			padding: 0;
+			display: flex;
+			align-items: center;
+		}
+	}
 }
 
 .projects {
