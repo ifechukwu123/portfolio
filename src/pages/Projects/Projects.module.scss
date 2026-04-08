@@ -1,2 +1,37 @@
 @use "../../styles/partials/variables" as *;
 @use "../../styles/partials/mixins" as *;
+
+.projects {
+	padding: 2rem $padding 6rem;
+	display: flex;
+	flex-direction: column;
+	gap: 3rem;
+
+	@include tablet {
+		padding: 4rem $tablet-padding 10rem;
+	}
+
+	@include desktop {
+		padding: 4rem $desktop-padding 10rem;
+	}
+
+	.header {
+		&__title {
+			text-transform: uppercase;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-template-columns: repeat(1, minmax(0, 1fr));
+		gap: 2rem;
+
+		@include tablet {
+			grid-template-columns: repeat(2, minmax(0, 1fr));
+		}
+
+		@include desktop {
+			grid-template-columns: repeat(3, minmax(0, 1fr));
+		}
+	}
+}

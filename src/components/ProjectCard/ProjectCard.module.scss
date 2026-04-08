@@ -1,0 +1,55 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.card__button {
+	display: none;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+
+.card-link {
+	//group
+	display: block;
+	height: 100%;
+
+	&:hover {
+		.card__button {
+			display: block;
+		}
+	}
+
+	.card {
+		height: 100%;
+		padding: 1rem;
+		border: 1px solid $primary-black;
+		border-radius: 0.5rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		position: relative;
+
+		&__image {
+			width: 3.75rem;
+			height: 3.75rem;
+			border: 1px solid $primary-black;
+			border-radius: 0.5rem;
+		}
+
+		&__info {
+			display: flex;
+			flex-direction: column;
+			gap: 0.25rem;
+		}
+
+		&__name {
+			font-size: 1.5rem;
+			line-height: 2rem;
+		}
+
+		&__description {
+			font-size: 1rem;
+			line-height: 1.5rem;
+		}
+	}
+}

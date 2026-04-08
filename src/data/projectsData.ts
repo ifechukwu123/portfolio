@@ -1,15 +1,15 @@
-import reactIcon from "../../public/icons/tools/react.svg";
-import figmaIcon from "../../public/icons/tools/figma.svg";
-import gitIcon from "../../public/icons/tools/git.svg";
-import githubIcon from "../../public/icons/tools/github.svg";
-import htmlIcon from "../../public/icons/tools/html5.svg";
-import javascriptIcon from "../../public/icons/tools/javascript.svg";
-import nextjsIcon from "../../public/icons/tools/nextjs.svg";
-import nodejsIcon from "../../public/icons/tools/nodejs.svg";
-import pythonIcon from "../../public/icons/tools/python.svg";
-import tailwindIcon from "../../public/icons/tools/tailwind.svg";
-import typescriptIcon from "../../public/icons/tools/typescript.svg";
-import projectImage from "../../public/images/project.png";
+import reactIcon from "../assets/icons/tools/react.svg";
+import figmaIcon from "../assets/icons/tools/figma.svg";
+import gitIcon from "../assets/icons/tools/git.svg";
+import githubIcon from "../assets/icons/tools/github.svg";
+import htmlIcon from "../assets/icons/tools/html5.svg";
+import javascriptIcon from "../assets/icons/tools/javascript.svg";
+import nextjsIcon from "../assets/icons/tools/nextjs.svg";
+import nodejsIcon from "../assets/icons/tools/nodejs.svg";
+import pythonIcon from "../assets/icons/tools/python.svg";
+import tailwindIcon from "../assets/icons/tools/tailwind.svg";
+import typescriptIcon from "../assets/icons/tools/typescript.svg";
+import projectImage from "../assets/images/project.png";
 
 interface Project {
 	id: number;
